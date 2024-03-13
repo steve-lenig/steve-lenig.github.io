@@ -617,7 +617,11 @@ textarea.form-control {
   align-items: flex-start;
 }
 
-.bg-blue-transparent { background-color: rgb(102 153 204 / 0.8); }
+.bg-blue-transparent {
+  background-color: rgba(50, 153, 255, 0.371);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+}
 
 .banner-section .logo-fa {  
   color: #fff;
