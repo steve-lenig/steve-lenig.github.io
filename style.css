@@ -1,0 +1,113 @@
+body {
+  /* font-family: Arial, sans-serif; */
+  font-family: 'Lucida Console', Monaco, monospace;
+  background-color: #000;
+  color: #ffba4c;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+a {
+  color: #ffba4c
+}
+
+header {
+  padding: 50px 100px;
+}
+
+.header-group {
+  margin-top: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.d0 {
+  top: 20%;
+  left: 5%;
+}
+
+.di0 {
+  margin-left: -4px;
+}
+
+.d1 {
+  top: 22%;
+  left: 65%;
+}
+
+.di1 {
+  margin-left: -4px;
+}
+
+.d2 {
+  top: 45%;
+  left: 25%;
+}
+
+.di2 {
+  margin-left: -14px;
+}
+
+.d3 {
+  top: 65%;
+  left: 75%;
+}
+
+.di3 {
+  margin-left: -14px;
+}
+
+.d4 {
+  top: 35%;
+  left: 85%;
+}
+
+.di4 {
+  margin-left: -24px;
+}
+
+.desktop-icon-link {
+  text-align: center;
+  text-decoration: none;
+  position: absolute;
+}
+
+.desktop-icon {
+  width: 70px;
+  height: auto;
+  position: absolute;
+  transform: translateY(-75px);
+}
+
+.icon-text {
+  color: #ffba4c;
+  margin-top: 5px;
+  text-align: center;
+  /* position: relative; */
+}
+
+@media screen and (max-width: 600px) {
+  #desktop-icons {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+  }
+
+  .desktop-icon-link {
+      position: static;
+      margin: 64px 0;
+  }
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #ffba4c;
+  text-decoration: none;
+  font-size: 36px;
+}
