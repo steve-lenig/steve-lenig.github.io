@@ -2,14 +2,15 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("journal-icon-link").style.display = "none";
     document.getElementById("vhiqosad-icon-link").style.display = "none";
 
-    const visitedJournal = localStorage.getItem("visitedJournal");
     const visitedGallery = localStorage.getItem("visitedGallery");
     const visitedShop = localStorage.getItem("visitedShop");
+    const visitedAbout = localStorage.getItem("visitedAbout");
+    const visitedJournal = localStorage.getItem("visitedJournal");
+
     if (visitedGallery || visitedShop || visitedAbout) {
         document.getElementById("journal-icon-link").style.display = "block";
     }
 
-    const visitedAbout = localStorage.getItem("visitedAbout");
     if (visitedJournal) {
         document.getElementById("vhiqosad-icon-link").style.display = "block";
     }
