@@ -7,6 +7,10 @@ body {
   font-size: 16px;
 }
 
+h3 {
+  line-height: 21px;
+}
+
 a {
   color: #ffba4c;
   text-decoration-line: none;
@@ -133,3 +137,18 @@ header {
   margin-bottom: 8px;
   color: #b87100;
 }
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  padding: 20px;
+  margin: 0 40px;
+}
+
+.gallery img {
+  max-width: 400px;
+  max-height: 269px;
+  margin: 20px 20px;
+}
+

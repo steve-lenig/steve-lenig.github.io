@@ -11,10 +11,40 @@
         <a href="index.html" class="back-button">&lt;</a>
         <div class="header-group">
           <img src="img/look.gif" alt="" class="desktop-icon di1">
-          <h1>Here are some demo and free projects</h1>
+          <h1>Here is some demo and free stuff</h1>
         </div>
     </header>
     <main>
+      <div class="gallery">
+        <h3>Full size images will be available as prints in the shop. Each maze is keyed with a path to the exit with ink only visible under a blacklight.</h3>
+        <div class="gcontainer">
+          <img src="img/Black Gives Way to Red.jpeg" alt="Black Gives Way to Red">
+        </div>
+        <img src="img/E3.jpeg" alt="E3">
+        <img src="img/Electric Borders.jpeg" alt="Electric Borders">
+        <img src="img/Excalimaze.jpeg" alt="Excalimaze">
+        <img src="img/Eyenima.jpeg" alt="Eyenima">
+        <img src="img/Floydian Slip.jpeg" alt="Floydian Slip">
+        <img src="img/Puffurize.jpeg" alt="Pufferize">
+        <img src="img/Rebel Tri-Start.jpeg" alt="Rebel Tri-Start">
+        <img src="img/Rouend.jpeg" alt="Rouend">
+        <img src="img/Start of Texas.jpeg" alt="Start of Texas">
+        <img src="img/Startship Enderprize.jpeg" alt="Startship Enderprize">
+        <img src="img/Welcome Home Planetarium.jpeg" alt="Welcome Home Planetarium">
+    </div>
     </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          var images = document.querySelectorAll('.gallery img');
+          images.forEach(function(image) {
+              // var randomHeight = 303 + Math.random() * 50; // Adjust the range as needed
+              // image.style.height = randomHeight + 'px';
+              var randomMarginTop = Math.random() * 100;
+              var randomMarginLeft = Math.random() * 100;
+              image.style.marginTop = randomMarginTop + 'px';
+              image.style.marginLeft = randomMarginLeft + 'px';
+          });
+      });
+  </script>
 </body>
 </html>
