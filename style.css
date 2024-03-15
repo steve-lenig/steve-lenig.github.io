@@ -110,7 +110,7 @@ header {
 }
 
 .back-button {
-  position: absolute;
+  position:fixed;
   height: 100px;
   width: 100px;
   top: 0px;
@@ -120,6 +120,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50px;
 }
 
 .journal-entry:hover{
@@ -158,4 +159,5 @@ header {
 
 .deck {
   margin-bottom: -28px;
+  margin-top: -10px;
 }
