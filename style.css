@@ -142,15 +142,20 @@ header {
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  justify-content:center;
+  justify-content: center;
   padding: 20px;
   margin: 0 40px;
+  text-align: center;
 }
 
 .gallery img {
   max-width: 400px;
   max-height: 269px;
   margin: 20px 20px;
+}
+
+.gallery h3 {
+  width: 100%;
 }
 
 .vhiqosad {
