@@ -5,12 +5,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const visitedJournal = localStorage.getItem("visitedJournal");
     const visitedGallery = localStorage.getItem("visitedGallery");
     const visitedShop = localStorage.getItem("visitedShop");
-    if (visitedGallery || visitedShop) {
+    if (visitedGallery || visitedShop || visitedAbout) {
         document.getElementById("journal-icon-link").style.display = "block";
     }
 
     const visitedAbout = localStorage.getItem("visitedAbout");
-    if (visitedJournal || visitedAbout) {
+    if (visitedJournal) {
         document.getElementById("vhiqosad-icon-link").style.display = "block";
     }
 
