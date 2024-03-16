@@ -14,7 +14,6 @@ h3 {
 a {
   color: #ffba4c;
   text-decoration-line: none;
-  /* text-decoration-style: solid; */
 }
 
 header {
@@ -26,6 +25,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .d0 {
@@ -44,6 +44,7 @@ header {
 
 .di1 {
   margin-left: -4px;
+  margin-bottom: 10px;
 }
 
 .d2 {
@@ -71,27 +72,25 @@ header {
 
 .di4 {
   margin-top: -5px;
-  margin-left: -24px;
+  margin-left: -9px;
 }
 
 .desktop-icon-link {
   text-align: center;
   text-decoration: none;
   position: absolute;
+  display: flex;
+  flex-direction: column;
 }
 
 .desktop-icon {
   width: 70px;
-  height: auto;
-  position: absolute;
-  transform: translateY(-75px);
 }
 
 .icon-text {
   color: #ffba4c;
   margin-top: 5px;
   text-align: center;
-  /* position: relative; */
 }
 
 @media screen and (max-width: 600px) {
@@ -105,7 +104,8 @@ header {
 
   .desktop-icon-link {
       position: static;
-      margin: 64px 0;
+      height: 100px;
+      margin: 20px;
   }
 }
 
@@ -163,6 +163,6 @@ header {
 }
 
 .deck {
-  margin-bottom: -28px;
+  margin-bottom: -29px;
   margin-top: -10px;
 }

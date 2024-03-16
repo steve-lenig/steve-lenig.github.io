@@ -17,9 +17,7 @@
     <main>
       <div class="gallery">
         <h3>Full size images will be available as prints in the shop</h3>
-        <div class="gcontainer">
-          <img src="img/Black Gives Way to Red.jpeg" alt="Black Gives Way to Red">
-        </div>
+        <img src="img/Black Gives Way to Red.jpeg" alt="Black Gives Way to Red">
         <img src="img/E3.jpeg" alt="E3">
         <img src="img/Electric Borders.jpeg" alt="Electric Borders">
         <img src="img/Excalimaze.jpeg" alt="Excalimaze">
@@ -37,8 +35,6 @@
       document.addEventListener("DOMContentLoaded", function() {
           var images = document.querySelectorAll('.gallery img');
           images.forEach(function(image) {
-              // var randomHeight = 303 + Math.random() * 50; // Adjust the range as needed
-              // image.style.height = randomHeight + 'px';
               var randomMarginTop = Math.random() * 100;
               var randomMarginLeft = Math.random() * 100;
               image.style.marginTop = randomMarginTop + 'px';

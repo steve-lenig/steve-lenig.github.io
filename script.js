@@ -8,11 +8,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const visitedJournal = localStorage.getItem("visitedJournal");
 
     if (visitedGallery || visitedShop || visitedAbout) {
-        document.getElementById("journal-icon-link").style.display = "block";
+        document.getElementById("journal-icon-link").style.display = "flex";
     }
 
     if (visitedJournal) {
-        document.getElementById("vhiqosad-icon-link").style.display = "block";
+        document.getElementById("vhiqosad-icon-link").style.display = "flex";
     }
 
     document.getElementById("journal-icon-link").addEventListener("click", function() {
