@@ -132,6 +132,12 @@ header {
   font-size: 20px;
 }
 
+.journal-content img {
+  max-width: 400px;
+  max-height: 269px;
+  margin: 20px 20px;
+}
+
 .caption {
   font-size: 15px;
   line-height: 28px;
