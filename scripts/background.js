@@ -103,12 +103,12 @@ window.onload = function () {
     const texCoordBuffer = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, texCoordBuffer);
     const texCoords = [
-        0, 1, // Bottom-left
-        0, 0, // Top-left
-        1, 1, // Bottom-right
-        0, 0, // Top-left
-        1, 0, // Top-right
-        1, 1  // Bottom-right
+        0, 1,
+        0, 0,
+        1, 1,
+        0, 0,
+        1, 0,
+        1, 1,
     ];
 
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(texCoords), gl.STATIC_DRAW);
@@ -116,9 +116,6 @@ window.onload = function () {
     // Get attribute and uniform locations
     const positionLocation = gl.getAttribLocation(program, 'a_position');
     const texCoordLocation = gl.getAttribLocation(program, 'a_texCoord');
-    // const dissolveTexLocation = gl.getUniformLocation(program, 'u_dissolveTexture');
-    // const nextTextureUniformLocation = gl.getUniformLocation(program, 'u_secondTexture');
-    // const currentTextureUniformLocation = gl.getUniformLocation(program, 'u_firstTexture');
     const dissolveTimeUniformLocation = gl.getUniformLocation(program, 'u_dissolveTime');
 
     // Bind position buffer
@@ -130,15 +127,12 @@ window.onload = function () {
     gl.enableVertexAttribArray(texCoordLocation);
 
     // Set viewport settings
-    const devicePixelRatio = window.devicePixelRatio || 1;
-    canvas.width = 5600 * devicePixelRatio;
-    canvas.height = 3440 * devicePixelRatio;
+    canvas.width = 2800;
+    canvas.height = 1720;
     gl.viewport(0, 0, canvas.width, canvas.height);
 
     // Load all textures
     loadTextures();
-
-
 
     function loadNoiseTexture(source, onload = () => {}) {
         // Load Noise DT
@@ -156,8 +150,6 @@ window.onload = function () {
         };
         noiseImage.src = source;
     }
-
-    // loadNoiseTexture(noiseUrls[0]);
    
     // Function to load textures for the current and next images
     function loadTextures() {
@@ -178,7 +170,6 @@ window.onload = function () {
                 // If this is the last texture, start rendering loop
                 if (i === imageUrls.length - 1) {
                     transitionTextures();
-                    // setTimeout(transitionTextures, IMAGE_DURATION);
                 }
             };
             image.src = imageUrls[i];
@@ -237,12 +228,8 @@ window.onload = function () {
 
             // Pass the current time and transition progress to the shader
             gl.uniform1f(dissolveTimeUniformLocation, transitionProgress);
-
-            // Clear the canvas
-            gl.clear(gl.COLOR_BUFFER_BIT);
-
-            // Draw the image
-            gl.drawArrays(gl.TRIANGLES, 0, 6);
+            gl.clear(gl.COLOR_BUFFER_BIT);     // Clear the canvas
+            gl.drawArrays(gl.TRIANGLES, 0, 6); // Draw the image
 
             // Request the next frame if transition is not complete
             if (transitionProgress < 1) {
