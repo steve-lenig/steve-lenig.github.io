@@ -10,18 +10,21 @@ window.onload = function () {
         'img/bg/Eyenima.jpeg',
         'img/bg/Start of Texas.jpeg',
         'img/bg/Puffurize.jpeg',
+        'img/bg/E3.jpeg',
         'img/bg/Rebel Tri-Start.jpeg',
         'img/bg/Startship Enderprize.jpeg',
         'img/bg/Rouend.jpeg',
-        'img/bg/E3.jpeg',
         'img/bg/Electric Borders.jpeg',
         'img/bg/Black Gives Way to Red.jpeg',
         'img/bg/welcome home planetarium double.jpeg',
     ];
-    const noiseUrls = [
+    const noiseStartUrls = [
         'img/noise/noiseHTS.jpg',
         'img/noise/noiseDTS.jpg',
         'img/noise/noiseVTS.jpg',
+    ];
+
+    const noiseUrls = [
         'img/noise/noiseFS.jpg',
         'img/noise/noisePS.jpg',
     ];
@@ -103,12 +106,12 @@ window.onload = function () {
     const texCoordBuffer = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, texCoordBuffer);
     const texCoords = [
-        0, 1,
-        0, 0,
-        1, 1,
-        0, 0,
-        1, 0,
-        1, 1,
+        0, 1, // Bottom left
+        0, 0, // Top left
+        1, 1, // Bottom right
+        0, 0, // Top left
+        1, 0, // Top right
+        1, 1, // Bottom right
     ];
 
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(texCoords), gl.STATIC_DRAW);
@@ -204,8 +207,8 @@ window.onload = function () {
         const secondTexUniformLocation = gl.getUniformLocation(program, 'u_secondTexture');
         gl.uniform1i(secondTexUniformLocation, 2);
 
-        const randomNoise = currentTextureIndex == 1 
-            ? noiseUrls[0] 
+        const randomNoise = currentTextureIndex == 1 || currentTextureIndex == imageUrls.length - 1
+            ? noiseStartUrls[Math.floor(noiseStartUrls.length * Math.random())]
             : noiseUrls[Math.floor(noiseUrls.length * Math.random())];
         loadNoiseTexture(randomNoise, () => {
             // Start the transition animation
