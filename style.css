@@ -36,6 +36,10 @@ header {
   padding: 50px 100px;
 }
 
+hr {
+  border-color: #ffba4c;
+}
+
 .header-group {
   margin-top: 65px;
   display: flex;
@@ -153,6 +157,7 @@ header {
 .journal-content {
   margin: 10px 60px;
   font-size: 22px;
+  line-height: 20px;
 }
 
 .journal-entry {
