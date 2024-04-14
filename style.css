@@ -50,7 +50,7 @@ hr {
 
 .d0 {
   top: 20%;
-  left: 5%;
+  left: 9%;
 }
 
 .di0 {
@@ -68,8 +68,8 @@ hr {
 }
 
 .d2 {
-  top: 45%;
-  left: 25%;
+  top: 58%;
+  left: 35%;
 }
 
 .di2 {
@@ -77,7 +77,7 @@ hr {
 }
 
 .d3 {
-  top: 65%;
+  top: 78%;
   left: 75%;
 }
 
@@ -175,25 +175,6 @@ hr {
   font-size: 15px;
   line-height: 16px;
   color: #b87100;
-}
-
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 20px;
-  margin: 0 40px;
-  text-align: center;
-}
-
-.gallery img {
-  max-width: 400px;
-  max-height: 269px;
-  margin: 20px 20px;
-}
-
-.gallery h3 {
-  width: 100%;
 }
 
 .vhiqosad {

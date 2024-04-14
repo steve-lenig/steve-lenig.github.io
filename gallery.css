@@ -1,0 +1,99 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  margin: 0 40px;
+  text-align: center;
+}
+
+.gallery img {
+  max-width: 400px;
+  max-height: 269px;
+  margin: 20px 20px;
+}
+
+.gallery h3 {
+  width: 100%;
+  margin: 40px 0 0 0;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab {
+  cursor: pointer;
+  padding: 30px 60px;
+}
+
+.tab.active {
+  background-color: #222222;
+  border-bottom: 1px solid;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  border: 2px solid;
+  border-radius: 8px;
+}
+
+.img-title {
+  padding-right: 16px;
+  max-width: 110px;
+  width: 100%;
+  line-height: 44px;
+}
+
+.image-popover {
+  position: fixed;
+  background-color: black;
+  padding: 20px;
+  border: 2px solid;
+  border-radius: 8px;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.image-popover img {
+  max-width: 80vw;
+  max-height: 80vh;
+  margin: 40px;
+}
+
+.hidden {
+  display: none;
+}
+
+.close {
+  position: absolute;
+  top: -18px;
+  right: -15px;
+  cursor: pointer;
+  height: 100px;
+  width: 100px;
+  font-size: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+}

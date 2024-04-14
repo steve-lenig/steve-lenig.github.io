@@ -5,6 +5,7 @@ window.onload = function () {
     const imageUrls = [
         'img/bg/Fake.jpeg',
         'img/bg/Fake.jpeg',
+        'img/bg/Self Titled.jpg',
         'img/bg/Excalimaze.jpeg',
         'img/bg/Floydian Slip.jpeg',
         'img/bg/Eyenima.jpeg',
@@ -58,7 +59,7 @@ window.onload = function () {
         varying vec2 v_texCoord;
         
         void main() {
-            // Sample the dissolve texture to determine burning state
+            // Sample the dissolve texture
             float dissolveValue = texture2D(u_dissolveTexture, v_texCoord).r;
         
             // Calculate the alpha value for blending between the two textures
@@ -131,7 +132,8 @@ window.onload = function () {
 
     // Set viewport settings
     canvas.width = 2800;
-    canvas.height = 1720;
+    // canvas.height = 1720;
+    canvas.height = 1866;
     gl.viewport(0, 0, canvas.width, canvas.height);
 
     // Load all textures
