@@ -23,6 +23,10 @@ canvas {
   height: 100%;
 }
 
+h2 {
+  line-height: 30px;
+}
+
 h3 {
   line-height: 27px;
 }
