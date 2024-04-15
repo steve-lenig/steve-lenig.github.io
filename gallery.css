@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 20px;
+  padding: 20px 0;
   margin: 0 40px;
   text-align: center;
 }
@@ -11,6 +11,7 @@
   max-width: 400px;
   max-height: 269px;
   margin: 20px 20px;
+  cursor: pointer;
 }
 
 .gallery h3 {
@@ -25,7 +26,8 @@
 
 .tab {
   cursor: pointer;
-  padding: 30px 60px;
+  padding: 25px 0;
+  width: 150px;
 }
 
 .tab.active {
@@ -65,7 +67,6 @@
 .image-popover {
   position: fixed;
   background-color: black;
-  padding: 20px;
   border: 2px solid;
   border-radius: 8px;
   z-index: 9999;
@@ -77,7 +78,7 @@
 .image-popover img {
   max-width: 80vw;
   max-height: 80vh;
-  margin: 40px;
+  margin: 60px;
 }
 
 .hidden {

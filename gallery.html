@@ -25,31 +25,29 @@
         </div>
     </header>
     <main>
-      <div class="gallery">
         <div class="image-container">
             <div class="image-popover hidden">
                 <span class="close">&times;</span>
                 <img src="" alt="Large Image" class="large-image">
             </div>
-        </div>        
-        <div class="tabs">
-            <div class="tab active" onclick="openTab('tab1')" id="ctab1">Standard</div>
-            <div class="tab" onclick="openTab('tab2')" id="ctab2">Commissions</div>
-            <div class="tab" onclick="openTab('tab3')" id="ctab3">Alphabet</div>
+        </div>  
+        <div class="gallery">      
+            <div class="tabs">
+                <div class="tab active" onclick="openTab('tab1')" id="ctab1">Originals</div>
+                <div class="tab" onclick="openTab('tab2')" id="ctab2">Commissions</div>
+                <div class="tab" onclick="openTab('tab3')" id="ctab3">Alphabet</div>
+            </div>
+            <div class="tab-content active" id="tab1">
+                <div class="images"></div>
+            </div>
+            <div class="tab-content" id="tab2">
+                <div class="images"></div>
+            </div>
+            <div class="tab-content" id="tab3">
+                <h3>Spell anything</h3>
+                <div class="images"></div>
+            </div>
         </div>
-        <div class="tab-content active" id="tab1">
-            <h3>The main attraction</h3>
-            <div class="images"></div>
-        </div>
-        <div class="tab-content" id="tab2">
-            <h3>Anything you can imagine</h3>
-            <div class="images"></div>
-        </div>
-        <div class="tab-content" id="tab3">
-            <h3>Spell anything</h3>
-            <div class="images"></div>
-        </div>
-    </div>
     </main>
     <script src="gallery.js"></script>
 </body>
