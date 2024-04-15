@@ -1,16 +1,15 @@
-function showFullSizeImage(imageUrl, smallImage) {
+function showFullSizeImage(imageUrl, title, smallImage) {
   const imagePopover = document.querySelector('.image-popover');
   const largeImage = imagePopover.querySelector('.large-image');
+  const largeImageTitle = imagePopover.querySelector('.large-image-title')
 
   if (!imagePopover.classList.contains('hidden')) {
     return; // Exit the function early if the popover is already open
   }
 
-  // Set the source of the larger image
   largeImage.src = imageUrl;
-
-  // Display the popover
   imagePopover.classList.remove('hidden');
+  largeImageTitle.textContent = title;
 
   // Close popover when clicking outside
   closePopoverOutside = function(event) {
@@ -131,7 +130,7 @@ function loadImages(tabId) {
     img.src = 'img/mazes/preview/' + imageName + '.jpg';
     img.alt = imageName;
     img.addEventListener('click', function() {
-      showFullSizeImage('img/mazes/watermark/' + imageName + '.jpg', img);
+      showFullSizeImage('img/mazes/watermark/' + imageName + '.jpg', imageName, img);
     });
 
     imgGroup.appendChild(img);
@@ -140,10 +139,10 @@ function loadImages(tabId) {
     title.classList.add('img-title');
     title.textContent = imageName;
 
-    imageFromName(imageName + ' BL.jpg', imgBl => {
+    imageFromName(imageName + ' BL.jpg', imageName, imgBl => {
       imgGroup.appendChild(imgBl);
     });
-    imageFromName(imageName + ' BL2.jpg', imgBl2 => {
+    imageFromName(imageName + ' BL2.jpg', imageName, imgBl2 => {
       imgGroup.appendChild(imgBl2);
     });
 
@@ -157,14 +156,14 @@ function loadImages(tabId) {
   });
 }
 
-function imageFromName(imageName, save) {
-  const path = 'img/mazes/preview/' + imageName;
+function imageFromName(fileName, imageName, save) {
+  const path = 'img/mazes/preview/' + fileName;
   checkImageExists(path, () => {
     const img = document.createElement('img');
     img.src = path;
-    img.alt = imageName;
+    img.alt = fileName;
     img.addEventListener('click', function() {
-      showFullSizeImage('img/mazes/watermark/' + imageName, img);
+      showFullSizeImage('img/mazes/watermark/' + fileName, imageName, img);
     });
     save(img);
   });
