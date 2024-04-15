@@ -48,7 +48,7 @@ function loadImages(tabId) {
         'E3',
         'Electric Borders',
         'Rebel Tri-Start',
-        'Rouend',
+        'RouEND',
         'Space$h!+',
         'Welcome Home Planetarium',
       ];
@@ -63,7 +63,7 @@ function loadImages(tabId) {
         'Holly is Love',
         'Judeth of Bohr',
         'Lady harper',
-        'LandMark Credit',
+        'Landmark Credit',
         'Macey Austin',
         'MomZilla',
         'Polly',
