@@ -114,20 +114,8 @@ function loadImages(tabId) {
   }
 
   images.forEach(imageName => {
-    const img = document.createElement('img');
-
-    img.src = 'img/mazes/preview/' + imageName + '.jpg';
-    img.alt = imageName;
-    img.addEventListener('click', function() {
-      showFullSizeImage('img/mazes/watermark/' + imageName + '.jpg', img);
-    });
-
-    const title = document.createElement('span');
-    title.classList.add('img-title');
-    title.textContent = imageName;
-    
+   
     const div = document.createElement('div');
-    div.classList.add('card')
     let randomMargin = [
       8 + Math.random() * 27,
       8 + Math.random() * 27,
@@ -136,26 +124,49 @@ function loadImages(tabId) {
     ]
     div.style.margin = randomMargin.join('px ') + 'px';
 
-    div.appendChild(img);
+    const imgGroup = document.createElement('div');
+    imgGroup.classList.add('img-group');
 
-
-    const blPath = 'img/mazes/preview/' + imageName + ' BL.jpg';
-    checkImageExists(blPath, () => {
-      const imgBl = document.createElement('img');
-      imgBl.src = blPath;
-      imgBl.alt = imageName;
-      imgBl.addEventListener('click', function() {
-        showFullSizeImage('img/mazes/watermark/' + imageName + ' BL.jpg', imgBl);
-      });
-      div.appendChild(imgBl);
-      div.appendChild(title);
+    const img = document.createElement('img');
+    img.src = 'img/mazes/preview/' + imageName + '.jpg';
+    img.alt = imageName;
+    img.addEventListener('click', function() {
+      showFullSizeImage('img/mazes/watermark/' + imageName + '.jpg', img);
     });
+
+    imgGroup.appendChild(img);
+
+    const title = document.createElement('span');
+    title.classList.add('img-title');
+    title.textContent = imageName;
+
+    imageFromName(imageName + ' BL.jpg', imgBl => {
+      imgGroup.appendChild(imgBl);
+    });
+    imageFromName(imageName + ' BL2.jpg', imgBl2 => {
+      imgGroup.appendChild(imgBl2);
+    });
+
+    div.appendChild(imgGroup);
 
     if (tabId !== 'tab3') {
       div.appendChild(title);
     }
 
     imagesContainer.appendChild(div);
+  });
+}
+
+function imageFromName(imageName, save) {
+  const path = 'img/mazes/preview/' + imageName;
+  checkImageExists(path, () => {
+    const img = document.createElement('img');
+    img.src = path;
+    img.alt = imageName;
+    img.addEventListener('click', function() {
+      showFullSizeImage('img/mazes/watermark/' + imageName, img);
+    });
+    save(img);
   });
 }
 

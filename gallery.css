@@ -49,16 +49,15 @@
   justify-content: center;
 }
 
-.card {
-  display: flex;
+.img-group {
   text-align: center;
-  align-items: center;
   border: 1px solid;
   border-radius: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .img-title {
-  padding-right: 16px;
   max-width: 110px;
   width: 100%;
   line-height: 44px;
