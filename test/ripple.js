@@ -114,7 +114,7 @@ gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW);
       // Draw
       gl.drawArrays(gl.TRIANGLES, 0, 6);
   };
-  image.src = '../img/mazes/Piranna.jpeg'; // Adjust the path as needed
+  image.src = '../img/mazes/watermark/Piranha.jpg'; // Adjust the path as needed
 
   const devicePixelRatio = window.devicePixelRatio || 1;
   canvas.width = image.width * devicePixelRatio;
