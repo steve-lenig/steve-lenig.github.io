@@ -38,16 +38,17 @@ function loadImages(tabId) {
     case 'tab1':
       images = [
         'Self Titled',
+        'Piranha',
+        'ExcalAmaze',
+        'Floydian Slip',
+        'EYEnima',
+        'Start of Texas',
+        'Dog Maze of Summer',
         'Black Gives Way to Red',
         'E3',
         'Electric Borders',
-        'ExcalAmaze',
-        'EYEnima',
-        'Floydian Slip',
-        'Dog Maze of Summer',
         'Rebel Tri-Start',
         'Rouend',
-        'Start of Texas',
         'Space$h!+',
         'Welcome Home Planetarium',
       ];
@@ -127,10 +128,13 @@ function loadImages(tabId) {
     
     const div = document.createElement('div');
     div.classList.add('card')
-    var randomMarginTop = Math.random() * 55 + 15;
-    var randomMarginLeft = Math.random() * 55 + 15;
-    div.style.marginTop = randomMarginTop + 'px';
-    div.style.marginLeft = randomMarginLeft + 'px';
+    let randomMargin = [
+      8 + Math.random() * 27,
+      8 + Math.random() * 27,
+      8 + Math.random() * 27,
+      8 + Math.random() * 27,
+    ]
+    div.style.margin = randomMargin.join('px ') + 'px';
 
     div.appendChild(img);
 
