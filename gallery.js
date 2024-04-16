@@ -50,10 +50,12 @@ function loadImages(tabId) {
         'RouEND',
         'Space$h!+',
         'Welcome Home Planetarium',
+        'Collection',
       ];
       break;
     case 'tab2':
       images = [
+        'Amy',
         'Ash',
         'Black Light Social Hour',
         'Cayrolla',
