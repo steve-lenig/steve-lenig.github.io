@@ -144,9 +144,9 @@ function loadImages(tabId) {
     imageFromName(imageName + ' BL.jpg', imageName, imgBl => {
       imgGroup.appendChild(imgBl);
     });
-    imageFromName(imageName + ' BL2.jpg', imageName, imgBl2 => {
-      imgGroup.appendChild(imgBl2);
-    });
+    // imageFromName(imageName + ' BL2.jpg', imageName, imgBl2 => {
+    //   imgGroup.appendChild(imgBl2);
+    // });
 
     div.appendChild(imgGroup);
 
