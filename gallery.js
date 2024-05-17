@@ -64,7 +64,7 @@ function loadImages(tabId) {
         'Holly is Love',
         'Judeth of Bohr',
         'Lady harper',
-        'Landmark Credit',
+        'LandMark Credit',
         'Macey Austin',
         'MomZilla',
         'Polly',
