@@ -59,6 +59,7 @@ function loadImages(tabId) {
         'Ash',
         'Black Light Social Hour',
         'Cayrolla',
+        'Extralife',
         'Hayes',
         'Hellfyre',
         'Holly is Love',
