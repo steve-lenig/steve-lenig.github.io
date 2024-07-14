@@ -36,7 +36,7 @@ function loadImages(tabId) {
   switch (tabId) {
     case 'tab1':
       images = [
-        'Self Titled',
+        'aMazeKing',
         'Piranha',
         'ExcalAmaze',
         'Floydian Slip',
@@ -138,9 +138,10 @@ function loadImages(tabId) {
 
     imgGroup.appendChild(img);
 
-    const title = document.createElement('span');
+    const title = document.createElement('a');
     title.classList.add('img-title');
     title.textContent = imageName;
+    title.href = `galleryDetail.html?i=${imageName}`;
 
     imageFromName(imageName + ' BL.jpg', imageName, imgBl => {
       imgGroup.appendChild(imgBl);
