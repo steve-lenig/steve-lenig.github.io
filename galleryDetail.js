@@ -10,8 +10,15 @@ const imageMap = {
       { image: 'img/mazes/watermark/Ash.jpg', title: 'custom title', description: 'custom description' },
       { image: 'img/mazes/watermark/E3.jpg' },
       { image: 'img/mazes/watermark/Extralife.jpg' },
+      { image: 'img/mazes/watermark/Hayes.jpg' },
+      { image: 'img/mazes/watermark/Polly.jpg' },
     ],
   },
+  'Piranha': {
+    items: [
+      { image: 'img/mazes/watermark/piranha.jpg', title: 'Piranha', description: 'Piranha description' }
+    ],
+  }
 };
 
 function getQueryParameter(name) {
@@ -36,28 +43,34 @@ title.textContent = galleryKey;
     const imageTitle = document.getElementById('image-title');
     const imageDescription = document.getElementById('image-description');
 
-    galleryData.items.forEach((item, index) => {
-        const title = item.title || defaultTitle;
+    // Create preview list and main viewer from data
+    galleryData.items.forEach((item) => {
+      const title = item.title || defaultTitle;
 
-        const mainSlide = document.createElement('div');
-        mainSlide.classList.add('gallery__slide');
-        const mainImage = document.createElement('img');
-        mainImage.src = item.image;
-        mainImage.alt = title;
-        mainSlide.appendChild(mainImage);
-        mainSliderContainer.appendChild(mainSlide);
+      const mainSlide = document.createElement('div');
+      mainSlide.classList.add('gallery__slide');
+      const mainImage = document.createElement('img');
+      mainImage.src = item.image;
+      mainImage.alt = title;
+      mainSlide.appendChild(mainImage);
+      mainSliderContainer.appendChild(mainSlide);
 
-        const previewSlide = document.createElement('div');
-        const previewSlideContent = document.createElement('div');
-        previewSlideContent.classList.add('preview-img-content');
-        const previewImage = document.createElement('img');
-        previewImage.src = item.image;
-        previewImage.alt = title;
-        previewSlideContent.appendChild(previewImage);
-        previewSlide.appendChild(previewSlideContent);
-        previewList.appendChild(previewSlide);
+      const previewSlide = document.createElement('div');
+      const previewSlideContent = document.createElement('div');
+      previewSlideContent.classList.add('preview-img-content');
+      const previewImage = document.createElement('img');
+      previewImage.src = item.image;
+      previewImage.alt = title;
+      previewSlideContent.appendChild(previewImage);
+      previewSlide.appendChild(previewSlideContent);
+      previewList.appendChild(previewSlide);
+
+      if (galleryData.items.length <= 1) {
+        previewList.classList.add('hidden');
+      }
     });
 
+    // Create sliders
     const mainSlider = tns({
       container: '.slider-main',
       items: 1,
@@ -75,7 +88,7 @@ title.textContent = galleryKey;
     function createPreviewSlider(axis) {
       return tns({
         container: '.preview-list',
-        items: 4,
+        items: axis === 'vertical' ? 5 : 4,
         slideBy: 'page',
         mouseDrag: true,
         swipeAngle: false,
@@ -159,7 +172,7 @@ title.textContent = galleryKey;
     function addZoomEffect(image) {
       const mainViewer = document.querySelector('.viewer');
 
-      image.style.transition = 'transform 0.3s ease'; // Add transition to the new image
+      image.style.transition = 'transform 0.15s ease-out'; // Add transition to the new image
 
       mainViewer.addEventListener('mousemove', (e) => {
           const rect = mainViewer.getBoundingClientRect();
