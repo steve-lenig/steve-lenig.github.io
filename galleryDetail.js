@@ -79,6 +79,8 @@ title.textContent = galleryKey;
       container: '.slider-main',
       items: 1,
       slideBy: 'page',
+      mouseDrag: true,
+      swipeAngle: false,
       autoplay: false,
       nav: false,
       controls: false,
@@ -108,33 +110,40 @@ title.textContent = galleryKey;
 
     let previewSlider = createPreviewSlider(currentAxis);
 
-    const mainSliderInfo = mainSlider.getInfo();
-    const previewSliderInfo = previewSlider.getInfo();
-    const mainSliderSlides = mainSliderInfo.slideItems;
-    const previewSliderSlides = Array.from(previewSliderInfo.slideItems);
+    // const mainSliderInfo = mainSlider.getInfo();
+    // const previewSliderInfo = previewSlider.getInfo();
+    // const mainSliderSlides = mainSliderInfo.slideItems;
+    // const previewSliderSlides = Array.from(previewSlider.getInfo().slideItems);
+
+    function updateSelectedPreview(index) {
+      imageTitle.textContent = galleryData.items[index].title || defaultTitle
+      imageDescription.textContent = galleryData.items[index].description || defaultDescription;
+
+      // previewSliderSlides.forEach(slide => {
+      //   slide.firstChild.classList.remove('active');
+      // });
+
+      // const prevActive = document.getElementsByClassName('preview-img-container-active');
+      // prevActive.classList.remove('preview-img-container-active');
+
+      const previewSliderSlides = Array.from(previewSlider.getInfo().slideItems);
+      previewSliderSlides.forEach(slide => {
+        slide.firstChild.classList.remove('preview-img-content-active');
+      });
+
+      previewSliderSlides[index].firstChild.classList.add('preview-img-content-active');
+    };
 
     function updateMainSlider(index) {
-        mainSlider.goTo(index);
-        imageTitle.textContent = galleryData.items[index].title || defaultTitle
-        imageDescription.textContent = galleryData.items[index].description || defaultDescription;
+      mainSlider.goTo(index);
+      updateSelectedPreview(index);
+    };
 
-        // previewSliderSlides.forEach(slide => {
-        //   slide.firstChild.classList.remove('active');
-        // });
-
-        // const prevActive = document.getElementsByClassName('preview-img-container-active');
-        // prevActive.classList.remove('preview-img-container-active');
-
-        previewSliderSlides.forEach(slide => {
-          slide.firstChild.classList.remove('preview-img-content-active');
-        });
-
-        previewSliderSlides[index].firstChild.classList.add('preview-img-content-active');
-    }
-
-    previewSliderSlides.forEach((slide, index) => {
+    let previewSlides = Array.from(previewSlider.getInfo().slideItems);
+    previewSlides.forEach((slide, index) => {
         slide.addEventListener('click', () => updateMainSlider(index));
     });
+    previewSlides[0].firstChild.classList.add('preview-img-content-active');
 
     // Set the initial title and description
     imageTitle.textContent = defaultTitle;
@@ -142,13 +151,14 @@ title.textContent = galleryKey;
 
     mainSlider.events.on('indexChanged', (info) => {
         const index = info.index;
-        imageTitle.textContent = galleryData.items[index].title || defaultTitle;
-        imageDescription.textContent = galleryData.items[index].description || defaultDescription;
+        // imageTitle.textContent = galleryData.items[index].title || defaultTitle;
+        // imageDescription.textContent = galleryData.items[index].description || defaultDescription;
         previewSlider.goTo(index);
+        updateSelectedPreview(index);
     });
 
     function updateSliderAxis() {
-      const isMobile = window.innerWidth <= 768;
+      const isMobile = window.innerWidth <= 640;
       const newAxis = isMobile ? 'horizontal' : 'vertical';
 
       if (currentAxis !== newAxis) {
@@ -162,7 +172,9 @@ title.textContent = galleryKey;
             slide.addEventListener('click', () => updateMainSlider(index));
         });
 
-        previewSlider.goTo(mainSlider.getInfo().index);
+        const currentIndex = mainSlider.getInfo().index;
+        previewSlider.goTo(currentIndex);
+        updateSelectedPreview(currentIndex);
       }
     }
 
