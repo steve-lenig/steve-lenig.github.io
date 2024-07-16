@@ -32,7 +32,6 @@ title.textContent = galleryKey;
     const defaultDescription = galleryData.items[0].description;
 
     const previewList = document.getElementById('preview-list');
-    // const mainImage = document.getElementById('main-image');
     const mainSliderContainer = document.querySelector('.slider-main');
     const imageTitle = document.getElementById('image-title');
     const imageDescription = document.getElementById('image-description');
@@ -49,31 +48,15 @@ title.textContent = galleryKey;
         mainSliderContainer.appendChild(mainSlide);
 
         const previewSlide = document.createElement('div');
-        // previewSlide.classList.add('preview-img-container');
         const previewSlideContent = document.createElement('div');
         previewSlideContent.classList.add('preview-img-content');
         const previewImage = document.createElement('img');
         previewImage.src = item.image;
         previewImage.alt = title;
-        // imgContainer.addEventListener('click', () => {
-        //     mainImage.src = src;
-        //     imageTitle.textContent = title;
-        //     imageDescription.textContent = galleryData.descriptions[index] || galleryData.descriptions[0];
-        //     const prevActive = document.getElementsByClassName('preview-img-container-active');
-        //     if (prevActive && prevActive.length > 0) {
-        //       prevActive[0].classList = 'preview-img-container';
-        //     }
-        //     imgContainer.classList.add('preview-img-container-active');
-        // });
         previewSlideContent.appendChild(previewImage);
         previewSlide.appendChild(previewSlideContent);
         previewList.appendChild(previewSlide);
     });
-
-    // Set the initial image, title, and description
-    // mainImage.src = galleryData.images[0];
-    // imageTitle.textContent = galleryData.titles[0];
-    // imageDescription.textContent = galleryData.descriptions[0];
 
     const mainSlider = tns({
       container: '.slider-main',
@@ -110,21 +93,10 @@ title.textContent = galleryKey;
 
     let previewSlider = createPreviewSlider(currentAxis);
 
-    // const mainSliderInfo = mainSlider.getInfo();
-    // const previewSliderInfo = previewSlider.getInfo();
-    // const mainSliderSlides = mainSliderInfo.slideItems;
-    // const previewSliderSlides = Array.from(previewSlider.getInfo().slideItems);
-
+    const mainSliderSlides = mainSlider.getInfo().slideItems;
     function updateSelectedPreview(index) {
       imageTitle.textContent = galleryData.items[index].title || defaultTitle
       imageDescription.textContent = galleryData.items[index].description || defaultDescription;
-
-      // previewSliderSlides.forEach(slide => {
-      //   slide.firstChild.classList.remove('active');
-      // });
-
-      // const prevActive = document.getElementsByClassName('preview-img-container-active');
-      // prevActive.classList.remove('preview-img-container-active');
 
       const previewSliderSlides = Array.from(previewSlider.getInfo().slideItems);
       previewSliderSlides.forEach(slide => {
@@ -151,10 +123,9 @@ title.textContent = galleryKey;
 
     mainSlider.events.on('indexChanged', (info) => {
         const index = info.index;
-        // imageTitle.textContent = galleryData.items[index].title || defaultTitle;
-        // imageDescription.textContent = galleryData.items[index].description || defaultDescription;
         previewSlider.goTo(index);
         updateSelectedPreview(index);
+        addZoomEffect(mainSliderSlides[index].querySelector('img'));
     });
 
     function updateSliderAxis() {
@@ -180,4 +151,29 @@ title.textContent = galleryKey;
 
     window.addEventListener('resize', updateSliderAxis);
     updateSliderAxis(); // Initial call
-  }
+
+    // Add zoom effect
+    const mainViewer = document.querySelector('.viewer');
+    const mainImage = mainViewer.querySelector('img');
+
+    function addZoomEffect(image) {
+      const mainViewer = document.querySelector('.viewer');
+
+      image.style.transition = 'transform 0.3s ease'; // Add transition to the new image
+
+      mainViewer.addEventListener('mousemove', (e) => {
+          const rect = mainViewer.getBoundingClientRect();
+          const x = e.clientX - rect.left; // x position within the element
+          const y = e.clientY - rect.top;  // y position within the element
+
+          // Calculate transform origin based on mouse position
+          const xPercent = (x / rect.width) * 100;
+          const yPercent = (y / rect.height) * 100;
+
+          image.style.transformOrigin = `${xPercent}% ${yPercent}%`;
+      });
+    }
+
+    // Apply zoom effect to the initial main image
+    addZoomEffect(mainSliderSlides[0].querySelector('img'));
+}
