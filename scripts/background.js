@@ -165,12 +165,12 @@ window.onload = function () {
                 const texture = createTexture(image);
                 textures[i] = texture;
 
-                if (i == 1) {
-                    gl.activeTexture(gl.TEXTURE2);
-                    gl.bindTexture(gl.TEXTURE_2D, texture);
-                    const secondTexUniformLocation = gl.getUniformLocation(program, 'u_secondTexture');
-                    gl.uniform1i(secondTexUniformLocation, 2);
-                }
+                // if (i == 0) {
+                //     gl.activeTexture(gl.TEXTURE2);
+                //     gl.bindTexture(gl.TEXTURE_2D, texture);
+                //     const secondTexUniformLocation = gl.getUniformLocation(program, 'u_secondTexture');
+                //     gl.uniform1i(secondTexUniformLocation, 2);
+                // }
 
                 // If this is the last texture, start rendering loop
                 if (i === imageUrls.length - 1) {
