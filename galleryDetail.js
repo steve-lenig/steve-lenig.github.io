@@ -85,8 +85,47 @@ title.textContent = galleryKey;
 
     let currentAxis = 'vertical';
 
+    function checkControlsVisibility() {
+      var isMobile = window.innerWidth <= 640;
+
+      const controlUp = document.querySelector('.control-up');
+      const controlDown = document.querySelector('.control-down');
+      const controlLeft = document.querySelector('.control-left');
+      const controlRight = document.querySelector('.control-right');
+
+      const info = previewSlider.getInfo();
+      if (info.index === 0) {
+          controlUp.style.display = 'none';
+          controlLeft.style.display = 'none';
+      } else {
+          controlUp.style.display = 'flex';
+          controlLeft.style.display = 'flex';
+      }
+
+      if (info.index + info.items >= info.slideCount) {
+          controlDown.style.display = 'none';
+          controlRight.style.display = 'none';
+      } else {
+          controlDown.style.display = 'flex';
+          controlRight.style.display = 'flex';
+      }
+
+      if (isMobile) {
+        controlUp.style.display = 'none';
+        controlDown.style.display = 'none';
+      } else {
+        controlLeft.style.display = 'none';
+        controlRight.style.display = 'none';
+      }
+    }
+
     function createPreviewSlider(axis) {
-      return tns({
+      const controlUp = document.querySelector('.control-up');
+      const controlDown = document.querySelector('.control-down');
+      const controlLeft = document.querySelector('.control-left');
+      const controlRight = document.querySelector('.control-right');
+  
+      const slider = tns({
         container: '.preview-list',
         items: axis === 'vertical' ? 5 : 4,
         slideBy: 'page',
@@ -97,11 +136,19 @@ title.textContent = galleryKey;
         loop: false,
         gutter: 6,
         // controlsText: ['<', '>'],
-        controls: false,
+        // controls: true,
         // nextButton: '.preview-list-next',
         // prevButton: '.preview-list-prev',
         nav: false,
+        // controlsContainer: '.preview-carousel-container',
+        prevButton: axis === 'vertical' ? controlUp : controlLeft,
+        nextButton: axis === 'vertical' ? controlDown : controlRight,
       });
+
+      slider.events.on('indexChanged', checkControlsVisibility);
+      slider.events.on('scroll', checkControlsVisibility);
+
+      return slider;
     }
 
     let previewSlider = createPreviewSlider(currentAxis);
@@ -122,6 +169,7 @@ title.textContent = galleryKey;
     function updateMainSlider(index) {
       mainSlider.goTo(index);
       updateSelectedPreview(index);
+      checkControlsVisibility();
     };
 
     let previewSlides = Array.from(previewSlider.getInfo().slideItems);
@@ -139,11 +187,11 @@ title.textContent = galleryKey;
         previewSlider.goTo(index);
         updateSelectedPreview(index);
         addZoomEffect(mainSliderSlides[index].querySelector('img'));
+        checkControlsVisibility();
     });
 
     function updateSliderAxis() {
-      const isMobile = window.innerWidth <= 640;
-      const newAxis = isMobile ? 'horizontal' : 'vertical';
+      const newAxis = window.innerWidth <= 640 ? 'horizontal' : 'vertical';
 
       if (currentAxis !== newAxis) {
         currentAxis = newAxis;
@@ -159,6 +207,7 @@ title.textContent = galleryKey;
         const currentIndex = mainSlider.getInfo().index;
         previewSlider.goTo(currentIndex);
         updateSelectedPreview(currentIndex);
+        checkControlsVisibility();
       }
     }
 
@@ -187,6 +236,9 @@ title.textContent = galleryKey;
       });
     }
 
+    // previewSlider.addEventListener('dragEnd', checkControlsVisibility());
+
     // Apply zoom effect to the initial main image
     addZoomEffect(mainSliderSlides[0].querySelector('img'));
+    checkControlsVisibility();
 }
