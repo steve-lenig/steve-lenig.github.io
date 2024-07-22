@@ -1,7 +1,10 @@
 .container {
   display: flex;
-  margin: 0 60px 40px 60px;
+  margin: 16px 60px 40px 60px;
   transition: all 0.5s ease-out;
+}
+h2 {
+  margin-top: 0px;
 }
 .gallery {
   display: flex;
@@ -35,6 +38,7 @@
   background: #181818;
   display: flex;
   align-items: center;
+  max-height: 606px;
   overflow: hidden;
 }
 .viewer img {
@@ -46,6 +50,27 @@
 }
 .viewer:hover img {
   transform: scale(3);
+}
+.shop-links {
+  border-radius: 8px;
+  border: 1px solid #b87100;
+  padding: 12px;
+  width: auto;
+  text-align: center;
+  font-size: 18px;
+  width: 270px;
+}
+.shop-links-content {
+  padding-top: 8px;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  font-size: 16px;
+  flex-shrink: 1;
+}
+.shop-links-content a:hover {
+  text-decoration-line: overline;
+  /* text-underline-position: above; */
 }
 .details {
   flex: 1;
@@ -126,7 +151,8 @@
 
 @media screen and (max-width: 1024px) {
   .container {
-    margin: 0 20px 40px 20px;
+    margin-left: 20px;
+    margin-right: 20px;
     transition: all 0.5s ease-out;
   }
 }

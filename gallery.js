@@ -37,15 +37,15 @@ function loadImages(tabId) {
     case 'tab1':
       images = [
         'aMazeKing',
-        'Piranha',
         'ExcalAmaze',
         'Floydian Slip',
         'EYEnima',
+        'animEYE',
         'Start of Texas',
         'Dog Maze of Summer',
         'Black Gives Way to Red',
         'E3',
-        'Electric Borders',
+        'Its Electric!',
         'Rebel Tri-Start',
         'RouEND',
         'Space$h!+',
@@ -55,6 +55,7 @@ function loadImages(tabId) {
       break;
     case 'tab2':
       images = [
+        'Piranha',
         'Amy',
         'Ash',
         'Black Light Social Hour',
@@ -78,6 +79,7 @@ function loadImages(tabId) {
       break;
     case 'tab3':
       images = [
+        'Alphabet - Collection1',
         'Start Left',
         'End Right',
         'Space Bar',
@@ -109,6 +111,25 @@ function loadImages(tabId) {
         'THICK CAPITAL ZULU',
         'THICK EXCLAMATION Point',
         'THICK Question Mark',
+        'Alphabet - Collection2',
+        'Alphabet - Collection3',
+        'Alphabet - Collection4',
+        'Alphabet - Collection5',
+        'Alphabet BL1',
+        'Alphabet BL2',
+        'Alphabet BL3',
+        'Alphabet BL4',
+        'Alphabet BL5',
+        'Alphabet BL6',
+        'Alphabet BL7',
+        'Alphabet BL8',
+        'Alphabet BL9',
+        'Alphabet BL10',
+        'Alphabet BL11',
+        'Alphabet BL12',
+        'Alphabet BL13',
+        'Alphabet BL14',
+        'Alphabet BL15',
       ];
       break;
     default:
@@ -141,7 +162,11 @@ function loadImages(tabId) {
     const title = document.createElement('a');
     title.classList.add('img-title');
     title.textContent = imageName;
-    title.href = `galleryDetail.html?i=${imageName}`;
+
+    if (tabId === 'tab1') {
+      title.classList.add('show-overline');
+      title.href = `galleryDetail.html?i=${encodeURIComponent(imageName)}`;
+    }
 
     imageFromName(imageName + ' BL.jpg', imageName, imgBl => {
       imgGroup.appendChild(imgBl);
