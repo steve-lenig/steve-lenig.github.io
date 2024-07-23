@@ -44,8 +44,8 @@ window.imageMap = {
           'img/mazes/watermark/ExcalAMAZE BL Castle 427.jpg',
           'img/mazes/watermark/ExcalAMAZE BL PrincINK1.jpg',
           'img/mazes/watermark/ExcalAMAZE BL PrincINK2.jpg',
-          'img/mazes/watermark/ExcalAMAZE BL Collection1.jpg',
-          'img/mazes/watermark/ExcalAMAZE BL Collection2.jpg',
+          'img/mazes/watermark/ExcalAmaze BL Collection1.jpg',
+          'img/mazes/watermark/ExcalAmaze BL Collection2.jpg',
         ],
         title: 'ExcalAMAZE Blacklight Enhanced',
         description: '<p>This is the entire idea completely fully realized!</p>'
@@ -455,7 +455,7 @@ window.imageMap = {
           + 'saw a thundercloud. Anyhow, It\'s not too tough of a maze, and now we have another maze design! YAY!</p>'
       },
       {
-        images: ['img/mazes/watermark/Ets Electric! BL1.jpg', 'img/mazes/watermark/Its Electric! BL2.jpg'],
+        images: ['img/mazes/watermark/Its Electric! BL1.jpg', 'img/mazes/watermark/Its Electric! BL2.jpg'],
         title: 'It\'s Electric! Blacklight',
         description: '<p>Some people just don\'t like the shiny neon color on the full enhanced versions. The only '
           + 'bit I kept was the words "start" and "end" as I thought it looked odd without anything glowing there.</p>'
