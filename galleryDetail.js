@@ -14,8 +14,8 @@ title.textContent = galleryKey;
 if (!itemData) {
   document.body.innerHTML = '<p>No images found for the specified gallery.</p>';
 } else {
-  const defaultTitle = itemData.items[0].title;
-  const defaultDescription = itemData.items[0].description;
+  const defaultTitle = itemData.items[0].title || '';
+  const defaultDescription = itemData.items[0].description || '';
 
   const previewList = document.getElementById('preview-list');
   const mainSliderContainer = document.querySelector('.slider-main');
@@ -25,32 +25,35 @@ if (!itemData) {
   const imageToItemIndex = [];
 
   // Create preview list and main viewer from data
-  itemData.items.forEach((item) => {
+  itemData.items.forEach((item, itemIndex) => {
     const title = item.title || defaultTitle;
 
-    const mainSlide = document.createElement('div');
-    mainSlide.classList.add('gallery__slide');
-    const mainImage = document.createElement('img');
-    mainImage.src = item.image;
-    mainImage.alt = title;
-    mainSlide.appendChild(mainImage);
-    mainSliderContainer.appendChild(mainSlide);
-
-    const previewSlide = document.createElement('div');
-    const previewSlideContent = document.createElement('div');
-    previewSlideContent.classList.add('preview-img-content');
-    const previewImage = document.createElement('img');
-    previewImage.src = item.image;
-    previewImage.alt = title;
-    previewSlideContent.appendChild(previewImage);
-    previewSlide.appendChild(previewSlideContent);
-    previewList.appendChild(previewSlide);
-
-    if (itemData.items.length <= 1) {
-      document.querySelector('.preview-list-container').style.display = 'none';
-      document.querySelector('.gallery').style.minHeight = '586px';
-    }
+    item.images.forEach(image => {
+      imageToItemIndex.push(itemIndex);
+      const mainSlide = document.createElement('div');
+      mainSlide.classList.add('gallery__slide');
+      const mainImage = document.createElement('img');
+      mainImage.src = image;
+      mainImage.alt = title;
+      mainSlide.appendChild(mainImage);
+      mainSliderContainer.appendChild(mainSlide);
+  
+      const previewSlide = document.createElement('div');
+      const previewSlideContent = document.createElement('div');
+      previewSlideContent.classList.add('preview-img-content');
+      const previewImage = document.createElement('img');
+      previewImage.src = image;
+      previewImage.alt = title;
+      previewSlideContent.appendChild(previewImage);
+      previewSlide.appendChild(previewSlideContent);
+      previewList.appendChild(previewSlide);
+    });
   });
+
+  if (imageToItemIndex.length <= 1) {
+    document.querySelector('.preview-list-container').style.display = 'none';
+    document.querySelector('.gallery').style.minHeight = '586px';
+  }
 
   // Create sliders
   const mainSlider = tns({
@@ -136,8 +139,9 @@ if (!itemData) {
 
   const mainSliderSlides = mainSlider.getInfo().slideItems;
   function updateSelectedPreview(index) {
-    imageTitle.textContent = itemData.items[index].title || defaultTitle;
-    imageDescription.innerHTML = itemData.items[index].description || defaultDescription;
+    const itemIndex = imageToItemIndex[index];
+    imageTitle.textContent = itemData.items[itemIndex].title || defaultTitle;
+    imageDescription.innerHTML = itemData.items[itemIndex].description || defaultDescription;
 
     const previewSliderSlides = Array.from(previewSlider.getInfo().slideItems);
     previewSliderSlides.forEach(slide => {

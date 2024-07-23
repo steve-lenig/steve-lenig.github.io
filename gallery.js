@@ -1,7 +1,7 @@
-function showFullSizeImage(imageUrl, title, smallImage) {
+function showFullSizeImage(imageUrl, title, smallImage, tabId) {
   const imagePopover = document.querySelector('.image-popover');
   const largeImage = imagePopover.querySelector('.large-image');
-  const largeImageTitle = imagePopover.querySelector('.large-image-title')
+  const largeImageLabel = imagePopover.querySelector('.large-image-label');
 
   if (!imagePopover.classList.contains('hidden')) {
     return; // Exit the function early if the popover is already open
@@ -9,7 +9,12 @@ function showFullSizeImage(imageUrl, title, smallImage) {
 
   largeImage.src = imageUrl;
   imagePopover.classList.remove('hidden');
-  largeImageTitle.textContent = title;
+  largeImageLabel.textContent = title;
+
+  if (tabId === 'tab1') {
+    largeImageLabel.classList.add('show-overline');
+    largeImageLabel.href = `galleryDetail.html?i=${encodeURIComponent(title)}`;
+  }
 
   // Close popover when clicking outside
   closePopoverOutside = function(event) {
@@ -137,7 +142,6 @@ function loadImages(tabId) {
   }
 
   images.forEach(imageName => {
-   
     const div = document.createElement('div');
     let randomMargin = [
       8 + Math.random() * 27,
@@ -154,7 +158,7 @@ function loadImages(tabId) {
     img.src = 'img/mazes/preview/' + imageName + '.jpg';
     img.alt = imageName;
     img.addEventListener('click', function() {
-      showFullSizeImage('img/mazes/watermark/' + imageName + '.jpg', imageName, img);
+      showFullSizeImage('img/mazes/watermark/' + imageName + '.jpg', imageName, img, tabId);
     });
 
     imgGroup.appendChild(img);
