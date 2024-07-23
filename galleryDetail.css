@@ -1,3 +1,6 @@
+.header-group {
+  margin-top: 0;
+}
 .container {
   display: flex;
   margin: 16px 60px 40px 60px;
@@ -76,7 +79,7 @@ h2 {
 }
 .details {
   flex: 1;
-  margin-left: 20px;
+  margin-left: 60px;
 }
 .control {
   background-color: rgba(0, 0, 0, 0.5);
