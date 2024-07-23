@@ -65,7 +65,13 @@ if (!itemData) {
     autoplay: false,
     nav: false,
     controls: false,
-    mode: 'gallery'
+    arrowKeys: true,
+    mode: 'gallery',
+    // mode: 'carousel',
+    // edgePadding: 0,
+    // gutter: 0,
+    // loop: false,
+    // autoWidth: true,
   });
 
   let currentAxis = 'vertical';
