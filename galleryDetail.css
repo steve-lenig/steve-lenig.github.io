@@ -160,6 +160,10 @@ h2 {
     margin-right: 20px;
     transition: all 0.5s ease-out;
   }
+  .details {
+    margin-left: 20px;
+    transition: all 0.5s ease-out;
+  }
 }
 
 @media screen and (max-width: 641px) {
@@ -187,5 +191,8 @@ h2 {
   }
   h2 {
     margin-top: 22px;
+  }
+  .details {
+    margin-left: 0;
   }
 }
