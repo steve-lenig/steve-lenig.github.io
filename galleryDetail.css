@@ -40,6 +40,7 @@ h2 {
   display: flex;
   align-items: center;
   overflow: hidden;
+  max-height: 606px;
 }
 .viewer img {
   width: 100%;
@@ -47,6 +48,8 @@ h2 {
   -o-object-fit: contain;
   object-fit: contain;
   user-select: none;
+  max-height: 606px;
+  min-width: 400px;
 }
 .viewer:hover img {
   transform: scale(3);
