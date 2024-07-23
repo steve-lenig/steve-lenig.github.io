@@ -174,7 +174,7 @@ function loadImages(tabId) {
 
     imageFromName(imageName + ' BL.jpg', imageName, imgBl => {
       imgGroup.appendChild(imgBl);
-    });
+    }, tabId);
     // imageFromName(imageName + ' BL2.jpg', imageName, imgBl2 => {
     //   imgGroup.appendChild(imgBl2);
     // });
@@ -189,14 +189,14 @@ function loadImages(tabId) {
   });
 }
 
-function imageFromName(fileName, imageName, save) {
+function imageFromName(fileName, imageName, save, tabId) {
   const path = 'img/mazes/preview/' + fileName;
   checkImageExists(path, () => {
     const img = document.createElement('img');
     img.src = path;
     img.alt = fileName;
     img.addEventListener('click', function() {
-      showFullSizeImage('img/mazes/watermark/' + fileName, imageName, img);
+      showFullSizeImage('img/mazes/watermark/' + fileName, imageName, img, tabId);
     });
     save(img);
   });

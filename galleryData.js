@@ -627,7 +627,7 @@ window.imageMap = {
   'Welcome Home Planetarium': {
     items: [
       {
-        images: ['img/mazes/watermark/welcome home planetarium.jpg'],
+        images: ['img/mazes/watermark/Welcome Home Planetarium.jpg'],
         title: 'Welcome Home Planetarium',
       }
     ]
