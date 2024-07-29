@@ -5,6 +5,7 @@ window.onload = function () {
     const imageUrls = [
         'img/bg/Fake.jpg',
         'img/bg/Fake.jpg',
+        'img/bg/Fake.jpg',
         'img/bg/Self Titled.jpg',
         'img/bg/ExcalAmaze.jpg',
         'img/bg/Floydian Slip.jpg',
@@ -35,7 +36,7 @@ window.onload = function () {
     let currentTextureIndex  = 0;
     let nextTextureIndex = 1;
 
-    // Vertex shader source
+    // Vertex shader
     const vertexShaderSource = `
         attribute vec4 a_position;
         attribute vec2 a_texCoord;
@@ -47,7 +48,7 @@ window.onload = function () {
         }
     `;
 
-    // Fragment shader source 
+    // Fragment shader 
     const fragmentShaderSource = `
         precision mediump float;
 
@@ -92,7 +93,7 @@ window.onload = function () {
     const vertexShader = compileShader(gl, vertexShaderSource, gl.VERTEX_SHADER);
     const fragmentShader = compileShader(gl, fragmentShaderSource, gl.FRAGMENT_SHADER);
 
-    // Link program
+    // Link and use program
     const program = gl.createProgram();
     gl.attachShader(program, vertexShader);
     gl.attachShader(program, fragmentShader);
@@ -100,8 +101,6 @@ window.onload = function () {
     if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
         console.error('Program linking error:', gl.getProgramInfoLog(program));
     }
-
-    // Use program
     gl.useProgram(program);
 
     const texCoordBuffer = gl.createBuffer();
@@ -165,12 +164,12 @@ window.onload = function () {
                 const texture = createTexture(image);
                 textures[i] = texture;
 
-                // if (i == 0) {
-                //     gl.activeTexture(gl.TEXTURE2);
-                //     gl.bindTexture(gl.TEXTURE_2D, texture);
-                //     const secondTexUniformLocation = gl.getUniformLocation(program, 'u_secondTexture');
-                //     gl.uniform1i(secondTexUniformLocation, 2);
-                // }
+                if (i == 2) {
+                    gl.activeTexture(gl.TEXTURE2);
+                    gl.bindTexture(gl.TEXTURE_2D, texture);
+                    const secondTexUniformLocation = gl.getUniformLocation(program, 'u_secondTexture');
+                    gl.uniform1i(secondTexUniformLocation, 2);
+                }
 
                 // If this is the last texture, start rendering loop
                 if (i === imageUrls.length - 1) {
@@ -209,7 +208,7 @@ window.onload = function () {
         const secondTexUniformLocation = gl.getUniformLocation(program, 'u_secondTexture');
         gl.uniform1i(secondTexUniformLocation, 2);
 
-        const randomNoise = currentTextureIndex == 1 || currentTextureIndex == imageUrls.length - 1
+        const randomNoise = currentTextureIndex == 2 || currentTextureIndex == imageUrls.length - 1
             ? noiseStartUrls[Math.floor(noiseStartUrls.length * Math.random())]
             : noiseUrls[Math.floor(noiseUrls.length * Math.random())];
         loadNoiseTexture(randomNoise, () => {

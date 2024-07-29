@@ -20,6 +20,7 @@ function showFullSizeImage(imageUrl, title, smallImage, tabId) {
   closePopoverOutside = function(event) {
       if (!imagePopover.contains(event.target) && !smallImage.contains(event.target)) {
           imagePopover.classList.add('hidden');
+          imagePopover.querySelector('.large-image').src = '';
           document.removeEventListener('click', closePopoverOutside);
       }
   };
@@ -29,6 +30,7 @@ function showFullSizeImage(imageUrl, title, smallImage, tabId) {
   const closeButton = imagePopover.querySelector('.close');
   closeButton.addEventListener('click', function() {
       imagePopover.classList.add('hidden');
+      imagePopover.querySelector('.large-image').src = '';
       document.removeEventListener('click', closePopoverOutside);
   });
 }
