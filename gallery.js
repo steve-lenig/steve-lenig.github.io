@@ -16,6 +16,10 @@ function showFullSizeImage(imageUrl, title, smallImage, tabId) {
     largeImageLabel.href = `galleryDetail.html?i=${encodeURIComponent(title)}`;
   }
 
+  if (tabId === 'tab3') {
+    largeImageLabel.textContent = '';
+  }
+
   // Close popover when clicking outside
   closePopoverOutside = function(event) {
       if (!imagePopover.contains(event.target) && !smallImage.contains(event.target)) {
