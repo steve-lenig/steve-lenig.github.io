@@ -2,35 +2,35 @@ window.imageMap = {
   'aMazeKing': {
     items: [
       {
-        images: ['img/mazes/watermark/aMazeKing.jpg', ],
+        images: ['img/mazes/full/aMazeKing.jpg', ],
         title: 'aMazeKing',
       },
     ],
   },
   'Piranha': {
     items: [
-      { images: ['img/mazes/watermark/Piranha.jpg'], title: 'Piranha', description: 'Made for Piranha Records' },
-      { images: ['img/mazes/watermark/Piranha BL.jpg'] }
+      { images: ['img/mazes/full/Piranha.jpg'], title: 'Piranha', description: 'Made for Piranha Records' },
+      { images: ['img/mazes/full/Piranha BL.jpg'] }
     ],
   },
   'ExcalAmaze': {
     items: [
       {
-        images: ['img/mazes/watermark/ExcalAMAZE Whats Golden.jpg'],
+        images: ['img/mazes/full/ExcalAMAZE Whats Golden.jpg'],
         title: 'ExcalAMAZE - Whats Golden',
         description: 'The record to beat this maze over the last 10 years is 2 hours. One kid working from '
           + 'the end, and another from the start met somewhere in the middle at around an hour. Therefor, 2 hours. Make sense?'
       },
       {
-        images: ['img/mazes/watermark/ExcalAMAZE Castle 427.jpg'],
+        images: ['img/mazes/full/ExcalAMAZE Castle 427.jpg'],
         title: 'ExcalAMAZE - Castle 427'
       },
       {
         images: [
-          'img/mazes/watermark/ExcalAMAZE BL 1.jpg',
-          'img/mazes/watermark/ExcalAMAZE BL 2.jpg',
-          'img/mazes/watermark/ExcalAMAZE BL 3.jpg',
-          'img/mazes/watermark/ExcalAMAZE BL 4.jpg',
+          'img/mazes/full/ExcalAMAZE BL 1.jpg',
+          'img/mazes/full/ExcalAMAZE BL 2.jpg',
+          'img/mazes/full/ExcalAMAZE BL 3.jpg',
+          'img/mazes/full/ExcalAMAZE BL 4.jpg',
         ],
         title: 'ExcalAMAZE Blacklight',
         description: '<p>This version has only the answer key and the words "start" and "end" in blacklight function.</p>'
@@ -39,13 +39,13 @@ window.imageMap = {
       },
       {
         images: [
-          'img/mazes/watermark/ExcalAMAZE BL Whats Golden1.jpg',
-          'img/mazes/watermark/ExcalAMAZE BL Whats Golden2.jpg',
-          'img/mazes/watermark/ExcalAMAZE BL Castle 427.jpg',
-          'img/mazes/watermark/ExcalAMAZE BL PrincINK1.jpg',
-          'img/mazes/watermark/ExcalAMAZE BL PrincINK2.jpg',
-          'img/mazes/watermark/ExcalAmaze BL Collection1.jpg',
-          'img/mazes/watermark/ExcalAmaze BL Collection2.jpg',
+          'img/mazes/full/ExcalAMAZE BL Whats Golden1.jpg',
+          'img/mazes/full/ExcalAMAZE BL Whats Golden2.jpg',
+          'img/mazes/full/ExcalAMAZE BL Castle 427.jpg',
+          'img/mazes/full/ExcalAMAZE BL PrincINK1.jpg',
+          'img/mazes/full/ExcalAMAZE BL PrincINK2.jpg',
+          'img/mazes/full/ExcalAmaze BL Collection1.jpg',
+          'img/mazes/full/ExcalAmaze BL Collection2.jpg',
         ],
         title: 'ExcalAMAZE Blacklight Enhanced',
         description: '<p>This is the entire idea completely fully realized!</p>'
@@ -78,18 +78,18 @@ window.imageMap = {
   'Floydian Slip': {
     items: [
       {
-        images: ['img/mazes/watermark/Floydian Slip.jpg'],
+        images: ['img/mazes/full/Floydian Slip.jpg'],
         title: 'Floydian Slip',
         description: 'There are refernces to 5 different Pink Floyd albums here. Do ya know your shtufff? '
           + 'Also, a rainbow is supposed to go to a pot of gold right? RIGHT!'
       },
       {
         images: [
-          'img/mazes/watermark/Floydian Slip BL1.jpg',
-          'img/mazes/watermark/Floydian Slip BL2.jpg',
-          'img/mazes/watermark/Floydian Slip BL3.jpg',
-          'img/mazes/watermark/Floydian Slip BL4.jpg',
-          'img/mazes/watermark/Floydian Slip BL5.jpg',
+          'img/mazes/full/Floydian Slip BL1.jpg',
+          'img/mazes/full/Floydian Slip BL2.jpg',
+          'img/mazes/full/Floydian Slip BL3.jpg',
+          'img/mazes/full/Floydian Slip BL4.jpg',
+          'img/mazes/full/Floydian Slip BL5.jpg',
         ],
         title: 'Floydian Slip Blacklight',
         description: '<p>This version has only the answer key and the words "start" and "end" in blacklight function.</p>'
@@ -98,13 +98,14 @@ window.imageMap = {
       },
       {
         images: [
-          'img/mazes/watermark/Floydian Slip BL Rainglow1.jpg',
-          'img/mazes/watermark/Floydian Slip BL Rainglow2.jpg',
-          'img/mazes/watermark/Floydian Slip BL Rainglow3.jpg',
-          'img/mazes/watermark/Floydian Slip BL DSR1.jpg',
-          'img/mazes/watermark/Floydian Slip BL DSR2.jpg',
-          'img/mazes/watermark/Floydian Slip BL DSR3.jpg',
-          'img/mazes/watermark/Floydian Slip BL Collection1.jpg',
+          'img/mazes/full/Floydian Slip BL Rainglow1.jpg',
+          'img/mazes/full/Floydian Slip BL Rainglow2.jpg',
+          'img/mazes/full/Floydian Slip BL Rainglow3.jpg',
+          'img/mazes/full/Floydian Slip BL Rainglow4.jpg',
+          'img/mazes/full/Floydian Slip BL DSR1.jpg',
+          'img/mazes/full/Floydian Slip BL DSR2.jpg',
+          'img/mazes/full/Floydian Slip BL DSR3.jpg',
+          'img/mazes/full/Floydian Slip BL Collection1.jpg',
         ],
         title: 'Floydian Slip Blacklight Enhanced',
         description:
@@ -130,7 +131,7 @@ window.imageMap = {
   'EYEnima': {
     items: [
       {
-        images: ['img/mazes/watermark/EYEnima - Redeye Start!1.jpg'],
+        images: ['img/mazes/full/EYEnima - Redeye Start!1.jpg'],
         title: 'EYEnima - Redeye Start!',
         description: '<p>This is likely the most time consuming and difficult maze I have drawn yet. '
           + 'I made sure to do my best to attempt to completely throw off even the most advanced of maze enthusiasts.</p>'
@@ -140,10 +141,10 @@ window.imageMap = {
       },
       {
         images: [
-          'img/mazes/watermark/EYEnima BL1.jpg',
-          'img/mazes/watermark/EYEnima BL2.jpg',
-          'img/mazes/watermark/EYEnima BL3.jpg',
-          'img/mazes/watermark/EYEnima BL4.jpg',
+          'img/mazes/full/EYEnima BL1.jpg',
+          'img/mazes/full/EYEnima BL2.jpg',
+          'img/mazes/full/EYEnima BL3.jpg',
+          'img/mazes/full/EYEnima BL4.jpg',
         ],
         title: 'EYEnima Blacklight',
         description: '<p>This version* has just the UV ink answer key, and the words \'start\' and \'end\' enhanced. '
@@ -155,12 +156,13 @@ window.imageMap = {
       },
       {
         images: [
-          'img/mazes/watermark/EYEnima BL Redeye Start!1.jpg',
-          'img/mazes/watermark/EYEnima BL Redeye Start!2.jpg',
-          'img/mazes/watermark/EYEnima BL Redeye Start!3.jpg',
-          'img/mazes/watermark/EYEnima BL Redeye Start!4.jpg',
-          'img/mazes/watermark/EYEnima BL Bloodeye Meze1.jpg',
-          'img/mazes/watermark/EYEnima BL Bloodeye Meze2.jpg',
+          'img/mazes/full/EYEnima BL Redeye Start!1.jpg',
+          'img/mazes/full/EYEnima BL Redeye Start!2.jpg',
+          'img/mazes/full/EYEnima BL Redeye Start!3.jpg',
+          'img/mazes/full/EYEnima BL Redeye Start!4.jpg',
+          'img/mazes/full/EYEnima BL Bloodeye Meze1.jpg',
+          'img/mazes/full/EYEnima BL Bloodeye Meze2.jpg',
+          'img/mazes/full/EYEnima BL Collection1.jpg',
         ],
         title: 'EYEnima Blacklight Enhanced',
         description: '<p>I thought of doing an eye from the Floydian Slip. I had put the illuminati eye in the tip '
@@ -189,7 +191,7 @@ window.imageMap = {
   'animEYE': {
     items: [
       {
-        images: ['img/mazes/watermark/animEYE.jpg'],
+        images: ['img/mazes/full/animEYE.jpg'],
         title: 'animEye',
         description: '<p>This is the inverse to EYEnima, so there was another eye to match with it.</p>'
           + '<p>This one is a little different from the rest. I inverted EYEnima in photoshop, then drew the '
@@ -201,11 +203,11 @@ window.imageMap = {
           + 'other ideas I have to do. So, cheating? maybe. But, I don\'t think so. Efficiency is more accurate.</p>'
       },
       {
-        images: ['img/mazes/watermark/animEYE - The Red Eye.jpg'],
+        images: ['img/mazes/full/animEYE - The Red Eye.jpg'],
         title: 'animEye - The Red Eye',
       },
       // {
-      //   images: ['img/mazes/watermark/animeye bl.jpg'],
+      //   images: ['img/mazes/full/animeye bl.jpg'],
       //   title: 'animEye Blacklight',
       //   description: '<p>Here is the inverted EYEnima should you prefer this version over the original eye, or need '
       //     + 'one to match! There\'s no enhancements on this aside from the words \'begon\' and \'finish\'. You know, '
@@ -215,9 +217,9 @@ window.imageMap = {
       // },
       {
         images: [
-          'img/mazes/watermark/animEYE BL.jpg',
-          'img/mazes/watermark/animEYE BL Collection1.jpg',
-          'img/mazes/watermark/animEYE BL Collection2.jpg',
+          'img/mazes/full/animEYE BL.jpg',
+          'img/mazes/full/animEYE BL Collection1.jpg',
+          'img/mazes/full/animEYE BL Collection2.jpg',
         ],
         title: 'animEye Blacklight Enhanced',
         description: '<p>Here is the fully enhanced inverted eyenima! It\'s glowy, and difficult!</p>'
@@ -245,12 +247,12 @@ window.imageMap = {
   'Start of Texas': {
     items: [
       {
-        images: ['img/mazes/watermark/Start of Texas.jpg'],
+        images: ['img/mazes/full/Start of Texas - National Flag of Texas.jpg'],
         title: 'Start of Texas - National Flag of Texas',
         description: '<p>Born, raised(ha!), live, bleed, love the Mighty Texas! So, this design was a <u>requirement</u>!</p>'
       },
       // {
-      //   images: ['img/mazes/watermark/start of texas bl.jpg'],
+      //   images: ['img/mazes/full/start of texas bl.jpg'],
       //   title: 'Start of Texas Blacklight',
       //   description: '<p>Maybe you do not like the distracting neon brightness, and only wish to have the answer key hidden.'
       //     + ' This variant is for YOU!</p>'
@@ -259,10 +261,9 @@ window.imageMap = {
       // },
       {
         images: [
-          'img/mazes/watermark/Start of Texas BL.jpg',
-          'img/mazes/watermark/Start of Texas BL National Flag of Texas.jpg',
-          'img/mazes/watermark/Start of Texas BL UT Orange.jpg',
-          'img/mazes/watermark/Start of Texas BL Blue Border.jpg',
+          'img/mazes/full/Start of Texas BL National Flag of Texas.jpg',
+          'img/mazes/full/Start of Texas BL UT Orange.jpg',
+          'img/mazes/full/Start of Texas BL Blue Border.jpg',
         ],
         title: 'Start of Texas Blacklight Enhanced',
         description: '<p>The Start of Texas print with as many enhancements I could do without straying too far from the '
@@ -289,8 +290,8 @@ window.imageMap = {
     items: [
       {
         images: [
-          'img/mazes/watermark/Dog Maze of Summer.jpg',
-          'img/mazes/watermark/Dog Maze of Summer - Puffur1.jpg',
+          'img/mazes/full/Dog Maze of Summer.jpg',
+          'img/mazes/full/Dog Maze of Summer - Puffur1.jpg',
         ],
         title: 'Dog Maze of Summer',
         description: '<p>This maze is a tribute to my old boy Puffur! It looks a whole lot like him. I left the '
@@ -300,8 +301,8 @@ window.imageMap = {
       },
       {
         images: [
-          'img/mazes/watermark/Dog Maze of Summer BL1.jpg',
-          'img/mazes/watermark/Dog Maze of Summer BL2.jpg',
+          'img/mazes/full/Dog Maze of Summer BL1.jpg',
+          'img/mazes/full/Dog Maze of Summer BL2.jpg',
         ],
         title: 'Dog Maze of Summer Blacklight',
         description: '<p>Sometimes it\'s just cooler to only have the answer key glow. Not everybody has a black '
@@ -313,9 +314,9 @@ window.imageMap = {
       },
       {
         images: [
-          'img/mazes/watermark/Dog Maze of Summer BL GOLDog1.jpg',
-          'img/mazes/watermark/Dog Maze of Summer BL GOLDog2.jpg',
-          'img/mazes/watermark/Dog Maze of Summer BL Pink Puff1.jpg',
+          'img/mazes/full/Dog Maze of Summer BL GOLDog1.jpg',
+          'img/mazes/full/Dog Maze of Summer BL GOLDog2.jpg',
+          'img/mazes/full/Dog Maze of Summer BL Pink Puff1.jpg',
         ],
         title: 'Dog Maze of Summer Blacklight Enhanced',
         description: '<p>Hey now! The Dog Maze of Summer! I\'ll try to find the picture I used of my dog to base the '
@@ -345,7 +346,11 @@ window.imageMap = {
   'Black Gives Way to Red': {
     items: [
       {
-        images: ['img/mazes/watermark/Black Gives Way to Red.jpg', 'img/mazes/watermark/Black Gives Way to Red2.jpg'],
+        images: [
+          'img/mazes/full/Black Gives Way to Red.jpg',
+          'img/mazes/full/Black Gives Way to Red1.jpg',
+          'img/mazes/full/Black Gives Way to Red2.jpg'
+        ],
         title: 'Black Gives Way to Red',
         description: '<p>This is named after Alice in Chains\' Black Gives Way to Blue. otherwise it has nothing '
           + 'to do with them.</p>'
@@ -354,8 +359,8 @@ window.imageMap = {
       },
       {
         images: [
-          'img/mazes/watermark/Black Gives Way to Red BL1.jpg',
-          'img/mazes/watermark/Black Gives Way to Red BL2.jpg',
+          'img/mazes/full/Black Gives Way to Red BL1.jpg',
+          'img/mazes/full/Black Gives Way to Red BL2.jpg',
         ],
         title: 'Black Gives Way to Red Blacklight',
         description: '<p>If you\'ve looked at both offereings, maybe you believe the enhanced version is lacking '
@@ -365,8 +370,8 @@ window.imageMap = {
       },
       {
         images: [
-          'img/mazes/watermark/Black Gives Way to Red BL Diamond Glow1.jpg',
-          'img/mazes/watermark/Black Gives Way to Red BL Diamond Glow2.jpg',
+          'img/mazes/full/Black Gives Way to Red BL Diamond Glow1.jpg',
+          'img/mazes/full/Black Gives Way to Red BL Diamond Glow2.jpg',
         ],
         title: 'Black Gives Way to Red - Blacklight Enhanced - Diamond Glow',
         description: '<p>This maze has by far the most difiicult and lengthiest answer key to apply. It takes '
@@ -391,18 +396,14 @@ window.imageMap = {
   'E3': {
     items: [
       {
-        images: ['img/mazes/watermark/E3.jpg'],
+        images: ['img/mazes/full/E3 - Super Novart.jpg'],
         title: 'E3',
         description: '<p>This is named "e3" after the old video game expo. It has one Start, and 3 Ends. '
           + 'It was drawn as kind of a galaxy swirl. I ran out of room to add more swirls because I didn\'t '
           + 'use pencils on that one and winged it!</p>'
       },
       {
-        images: ['img/mazes/watermark/E3 - Super Novart.jpg'],
-        title: 'E3 - Super Novart'
-      },
-      {
-        images: ['img/mazes/watermark/E3 BL1.jpg'],
+        images: ['img/mazes/full/E3 BL1.jpg'],
         title: 'E3 Blacklight',
         description: '<p>This one has pastels in it! oohh laahh laahhh. I like how it looks, but ultimately '
           + 'those are not nearly precise enough to warrant using again, so I haven\'t! Anyhow, it\'s 3 '
@@ -414,13 +415,12 @@ window.imageMap = {
       },
       {
         images: [
-          'img/mazes/watermark/E3 BL.jpg',
-          'img/mazes/watermark/E3 BL Red Giant1.jpg',
-          'img/mazes/watermark/E3 BL Red Giant2.jpg',
-          'img/mazes/watermark/E3 BL Super Novart1.jpg',
-          'img/mazes/watermark/E3 BL Super Novart2.jpg',
-          'img/mazes/watermark/E3 BL Super Novart3.jpg',
-          'img/mazes/watermark/E3 BL Collection1.jpg',
+          'img/mazes/full/E3 BL Red Giant1.jpg',
+          'img/mazes/full/E3 BL Red Giant2.jpg',
+          'img/mazes/full/E3 BL Super Novart1.jpg',
+          'img/mazes/full/E3 BL Super Novart2.jpg',
+          'img/mazes/full/E3 BL Super Novart3.jpg',
+          'img/mazes/full/E3 BL Collection1.jpg',
         ],
         title: 'E3 Blacklight Enhanced',
         description: '<p>This thing looks like a beast under blacklight. It\'s One of my favorite full on '
@@ -446,7 +446,7 @@ window.imageMap = {
   'Its Electric!': {
     items: [
       {
-        images: ['img/mazes/watermark/Its Electric!.jpg'],
+        images: ['img/mazes/full/Its Electric!.jpg'],
         title: 'It\'s Electric!',
         description: '<p>This maze I drew in front of one of my co-workers at FedEX. After the planes took off, '
           + 'everybody had to wait in case there was an emergency and they had to turn around and have us unload.</p>'
@@ -455,7 +455,7 @@ window.imageMap = {
           + 'saw a thundercloud. Anyhow, It\'s not too tough of a maze, and now we have another maze design! YAY!</p>'
       },
       {
-        images: ['img/mazes/watermark/Its Electric! BL1.jpg', 'img/mazes/watermark/Its Electric! BL2.jpg'],
+        images: ['img/mazes/full/Its Electric! BL1.jpg', 'img/mazes/full/Its Electric! BL2.jpg'],
         title: 'It\'s Electric! Blacklight',
         description: '<p>Some people just don\'t like the shiny neon color on the full enhanced versions. The only '
           + 'bit I kept was the words "start" and "end" as I thought it looked odd without anything glowing there.</p>'
@@ -464,10 +464,10 @@ window.imageMap = {
       },
       {
         images: [
-          'img/mazes/watermark/Its Electric! BL Electric Borders1.jpg',
-          'img/mazes/watermark/Its Electric! BL Electric Borders2.jpg',
-          'img/mazes/watermark/Its Electric! BL Color Burns1.jpg',
-          'img/mazes/watermark/Its Electric! BL Color Burns2.jpg',
+          'img/mazes/full/Its Electric! BL Electric Borders1.jpg',
+          'img/mazes/full/Its Electric! BL Electric Borders2.jpg',
+          'img/mazes/full/Its Electric! BL Color Burns1.jpg',
+          'img/mazes/full/Its Electric! BL Color Burns2.jpg',
         ],
         title: 'It\'s Electric! Blacklight Enhanced',
         description: '<p>This is a rather straight-forward standard style, slightly difficult maze. I named it '
@@ -494,8 +494,7 @@ window.imageMap = {
     items: [
       {
         images: [
-          'img/mazes/watermark/Rebel Tri-Start.jpg',
-          'img/mazes/watermark/Rebel Tri-Start2.jpg',
+          'img/mazes/full/Rebel Tri-Start.jpg',
         ],
         title: 'Rebel Tri-Start',
         description: '<p>This is the 1st maze I drew as an adul..older person. It is three different mazes '
@@ -504,8 +503,8 @@ window.imageMap = {
       },
       {
         images: [
-          'img/mazes/watermark/Rebel Tri-Start BL.jpg',
-          'img/mazes/watermark/Rebel Tri-Start BL1.jpg',
+          'img/mazes/full/Rebel Tri-Start BL.jpg',
+          'img/mazes/full/Rebel Tri-Start BL1.jpg',
         ],
         title: 'Rebel Tri-Start Blacklight Enhanced',
         description: '<p>This is the "I need to draw art for my walls like my friends have on theirs" first maze I drew.</p>'
@@ -527,12 +526,12 @@ window.imageMap = {
   'RouEND': {
     items: [
       {
-        images: ['img/mazes/watermark/RouEND.jpg'],
+        images: ['img/mazes/full/RouEND - Triangle.jpg', 'img/mazes/full/RouEND - Triangle2.jpg'],
         title: 'RouEND - RouEND Triangle',
         description: '<p>I\'ll maze circles around you... with more circles. Yaaaaaayyyy</p>'
       },
       // {
-      //   images: ['img/mazes/watermark/rouend bl.jpg'],
+      //   images: ['img/mazes/full/rouend bl.jpg'],
       //   title: 'RouEND Blacklight',
       //   description: '<p>Added to the standard print of RouEND is the fabuluous Black Light Answer Key! '
       //     + 'I also enhanced the words start and end for fun!</p>'
@@ -540,12 +539,13 @@ window.imageMap = {
       // },
       {
         images: [
-          'img/mazes/watermark/RouEND BL Triangle1.jpg',
-          'img/mazes/watermark/RouEND BL Triangle2.jpg',
-          'img/mazes/watermark/RouEND BL Certainly Circular1.jpg',
-          'img/mazes/watermark/RouEND BL Certainly Circular2.jpg',
-          'img/mazes/watermark/RouEND BL Certainly Circular3.jpg',
-          'img/mazes/watermark/RouEND BL Collection1.jpg',
+          'img/mazes/full/RouEND BL Triangle1.jpg',
+          'img/mazes/full/RouEND BL Triangle2.jpg',
+          'img/mazes/full/RouEND BL Certainly Circular1.jpg',
+          'img/mazes/full/RouEND BL Certainly Circular2.jpg',
+          'img/mazes/full/RouEND BL Certainly Circular3.jpg',
+          'img/mazes/full/RouEND BL Collection1.jpg',
+          'img/mazes/full/RouEND BL Collection2.jpg',
         ],
         title: 'RouEND Blacklight Enhanced',
         description: '<p>The complete vision all in one place! It\'s the full color print on the swanky '
@@ -573,7 +573,7 @@ window.imageMap = {
   'Space$h!+': {
     items: [
       {
-        images: ['img/mazes/watermark/Space$h!+.jpg'],
+        images: ['img/mazes/full/Space$h!+ - Light My Way1.jpg'],
         title: 'Space$h!+',
         description: '<p>ALL HAIL Space$h!+!</p>'
           + '<p>This is how I used to draw spaceships in elementary school. I think maybe close encounters '
@@ -584,12 +584,12 @@ window.imageMap = {
       },
       {
         images: [
-          'img/mazes/watermark/Space$h!+ BL.jpg',
-          'img/mazes/watermark/Space$h!+ BL Light My Way1.jpg',
-          'img/mazes/watermark/Space$h!+ BL Light My Way2.jpg',
-          'img/mazes/watermark/Space$h!+ BL Dark Slider1.jpg',
-          'img/mazes/watermark/Space$h!+ BL Dark Slider2.jpg',
-          'img/mazes/watermark/Space$h!+ BL Collection1.jpg',
+          'img/mazes/full/Space$h!+ BL.jpg',
+          'img/mazes/full/Space$h!+ BL Light My Way1.jpg',
+          'img/mazes/full/Space$h!+ BL Light My Way2.jpg',
+          'img/mazes/full/Space$h!+ BL Dark Slider1.jpg',
+          'img/mazes/full/Space$h!+ BL Dark Slider2.jpg',
+          'img/mazes/full/Space$h!+ BL Collection1.jpg',
         ],
         title: 'Space$h!+ Blacklight Enhanced',
         description: '<p>Ye oldé spaceship design from my youth. How I used to draw \'em. It glows super '
@@ -617,7 +617,7 @@ window.imageMap = {
   'Welcome Home Planetarium': {
     items: [
       {
-        images: ['img/mazes/watermark/Welcome Home Planetarium.jpg'],
+        images: ['img/mazes/full/Welcome Home Planetarium.jpg'],
         title: 'Welcome Home Planetarium',
       }
     ]
@@ -626,15 +626,14 @@ window.imageMap = {
     items: [
       {
         images: [
-          'img/mazes/watermark/Collection BL4.jpg',
-          'img/mazes/watermark/Collection BL6.jpg',
-          'img/mazes/watermark/Collection.jpg',
-          'img/mazes/watermark/Collection BL1.jpg',
-          'img/mazes/watermark/Collection BL2.jpg',
-          'img/mazes/watermark/Collection BL3.jpg',
-          'img/mazes/watermark/Collection BL5.jpg',
-          'img/mazes/watermark/Collection BL7.jpg',
-          'img/mazes/watermark/Collection BL8.jpg',
+          'img/mazes/full/Collection BL4.jpg',
+          'img/mazes/full/Collection BL6.jpg',
+          'img/mazes/full/Collection BL1.jpg',
+          'img/mazes/full/Collection BL2.jpg',
+          'img/mazes/full/Collection BL3.jpg',
+          'img/mazes/full/Collection BL5.jpg',
+          'img/mazes/full/Collection BL7.jpg',
+          'img/mazes/full/Collection BL8.jpg',
         ],
         title: 'The Collection',
       },
