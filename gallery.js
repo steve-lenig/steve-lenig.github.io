@@ -47,6 +47,7 @@ function loadImages(tabId) {
   switch (tabId) {
     case 'tab1':
       images = [
+        'Self-Titled',
         'aMazeKing',
         'ExcalAmaze',
         'Floydian Slip',

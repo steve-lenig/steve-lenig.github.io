@@ -1,4 +1,69 @@
 window.imageMap = {
+  'Self-Titled': {
+    items: [
+      {
+        images: ['img/mazes/full/Self-Titled.jpg', 'img/mazes/full/Self-Titled2.jpg'],
+        title: 'Self-Titled',
+        description: '<p>This maze is finally done! I started it around July 12th 2023. It took over a year '
+          + 'to finish this one. I left the center mostly empty for once while doing the entire background. '
+          + 'As I got more and more pleased with the surrounding elements, I started to get nervous I would '
+          + 'do something in the center that couldn\'t possibly live up to the rest, and thought I would ruin '
+          + 'it. So, I kept pivotiong to other projects, and pushing this one further back. Finally, I decided '
+          + 'I would NOT draw anything else, personal or otherwise, until this one is finally off my plate. Now, '
+          + 'the reason it\'s called Self-titled is I have my obligatory "¥" symbol in there, and that\'s kind '
+          + 'of my pseudo self-chosen name differentiator. I saw the movie Enemy of the State (this movie is '
+          + 'one of the most important movies of my ¥oung life) way back in 1998, and the openeing credits had '
+          + 'that "¥" and I took it not knowing it was the Japanese symbol for money. Once I found out, it was '
+          + 'already way too big a part of my identity, so here we are. I do not have black light function for '
+          + 'this one yet. maybe a week from today.</p>'
+      },
+      {
+        images: [
+          'img/mazes/full/Self-Titled BL.jpg',
+          'img/mazes/full/Self-Titled BL2.jpg',
+          'img/mazes/full/Self-Titled BL3.jpg',
+          'img/mazes/full/Self-Titled BL4.jpg',
+          'img/mazes/full/Self-Titled BL5.jpg',
+          'img/mazes/full/Self-Titled BL6.jpg',
+          'img/mazes/full/Self-Titled BL7.jpg',
+        ],
+        title: 'Self-Titled Blacklight',
+      },
+      {
+        images: [
+          'img/mazes/full/Self-Titled Progress01.jpg',
+          'img/mazes/full/Self-Titled Progress02.jpg',
+          'img/mazes/full/Self-Titled Progress03.jpg',
+          'img/mazes/full/Self-Titled Progress04.jpg',
+          'img/mazes/full/Self-Titled Progress05.jpg',
+          'img/mazes/full/Self-Titled Progress06.jpg',
+          'img/mazes/full/Self-Titled Progress07.jpg',
+          'img/mazes/full/Self-Titled Progress08.jpg',
+          'img/mazes/full/Self-Titled Progress09.jpg',
+          'img/mazes/full/Self-Titled Progress10.jpg',
+          'img/mazes/full/Self-Titled Progress11.jpg',
+          'img/mazes/full/Self-Titled Progress12.jpg',
+          'img/mazes/full/Self-Titled Progress13.jpg',
+        ],
+        title: 'Self-Titled - Progresss Photos',
+      },
+      {
+        images: [
+          'img/mazes/full/Self-Titled Collection1.jpg',
+          'img/mazes/full/Self-Titled Collection2.jpg',
+          'img/mazes/full/Self-Titled Collection3.jpg',
+          'img/mazes/full/Self-Titled Collection4.jpg',
+        ],
+        title: 'Self-Titled - The Collection',
+      },
+    ],
+    shopLinks: [
+      {
+        label: 'Standard',
+        link: 'https://amazeking-shop.fourthwall.com/products/self-titled',
+      }
+    ],
+  },
   'aMazeKing': {
     items: [
       {
