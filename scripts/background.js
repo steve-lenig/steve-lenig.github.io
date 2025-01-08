@@ -116,16 +116,8 @@ window.onload = function () {
 
     const texCoordBuffer = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, texCoordBuffer);
-    const texCoords = [
-        0, 1, // Bottom left
-        0, 0, // Top left
-        1, 1, // Bottom right
-        0, 0, // Top left
-        1, 0, // Top right
-        1, 1, // Bottom right
-    ];
-
-    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(texCoords), gl.STATIC_DRAW);
+    const texCoords = new Float32Array([0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1]);
+    gl.bufferData(gl.ARRAY_BUFFER, texCoords, gl.STATIC_DRAW);
 
     // Get attribute and uniform locations
     const positionLocation = gl.getAttribLocation(program, 'a_position');

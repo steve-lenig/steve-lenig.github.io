@@ -1,0 +1,77 @@
+How to Add a New Journal Entry
+
+Follow these steps to add a new journal entry to your journal.html file:
+
+1. Open SourceTree
+    • Select "steve-lenig.github.io" repo tab
+        ◦ If you cant find the repo, try "File -> Open" to look for it
+        ◦ If you still cant find it, you can "File -> Clone" with this URL:
+          https://github.com/steve-lenig/steve-lenig.github.io.git
+    • Hit the "Pull" button to get the latest changes
+
+2. Open the journal.html file
+    • Open in VisualStudio Code
+
+3. Find the "journal-content" div
+    • Look for a line that says <div class="journal-content">
+
+4. Paste in the template entry below, right underneath the "journal-content" div
+
+            <div class="journal-entry">
+                <div class="caption">(April 5 2024 21:10 CST)</div>
+                <h2>Journal Title Goes here!</h2>
+                <p>
+                   This is paragraph one!
+                </p>
+                <p>
+                   This is paragraph two!
+                </p>
+                <hr />
+            </div>
+
+5. Replace the Date part "(April 5 2024 21:10 CST)" with the current date and time
+
+6. Replace the "Journal Title Goes here!" with the new entry's title
+
+7. Replace the paragraphs with the journal entry text
+    •  You can add more paragraphs by copying the <p> ... </p> blocks 
+
+8. (Optional) Add images to the journal entry:
+    •  Put the image into the "img/journal" folder
+    •  Copy this example into the journal entry, and replace the "imagename.jpg" with the file name
+    
+      <img src="img/journal/imagename.jpg" alt="imagename">
+
+    • To add an image from the web to the journal entry, replace the scr="..." to have the image URL
+    
+      <img src="https://www.website/imageurl" alt="imagename">
+
+9. (Optional) Add links to the journal entry:
+    • Copy this example into the journal entry, and replace the "https://..." with the link URL, and "link text" with the text you want linked
+        
+            <a href="https://www.sunsetvalley.org/home/">
+                link text
+            </a>
+
+    • You can use an image instead of link text as well:
+
+            <a href="https://www.sunsetvalley.org/home/">
+                <img src="https://www.sunsetvalley.org/home/showpublishedimage/1514/638462899020970000" alt="image">
+            </a>
+
+10. Make sure that after your done editing, the "<hr />" is still the last item, like where it is in the example in step 4.
+
+11. Save the file
+
+12. Preview changes by clicking on "index.html", and click the "Show Preview" button to see the site Preview
+    • "Show Preview" button should be on the same level as the tabs, all the way on the right
+
+13. Send the changes using SourceTree
+    • Hit the "Commit" button in the top-left
+    • Hit the "Stage All" button above the list of changed files
+    • Type a message in the box in the bottom (or dont)
+    • Hit the "Commit" button at the bottom
+    • Hit the "Push" button at the top
+
+14. Wait a few miniutes, and the website will be updated!
+
