@@ -2,7 +2,7 @@ window.imageMap = {
   'Self-Titled': {
     items: [
       {
-        images: ['img/mazes/full/Self-Titled.jpg', 'img/mazes/full/Self-Titled2.jpg'],
+        images: ['img/mazes/full/Self-Titled.jpg'],
         title: 'Self-Titled',
         description: '<p>This maze is finally done! I started it around July 12th 2023. It took over a year '
           + 'to finish this one. I left the center mostly empty for once while doing the entire background. '

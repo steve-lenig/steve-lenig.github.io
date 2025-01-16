@@ -1,4 +1,5 @@
 function showFullSizeImage(imageUrl, title, smallImage, tabId) {
+  const dimmerOverlay = document.querySelector('.gallery-overlay');
   const imagePopover = document.querySelector('.image-popover');
   const largeImage = imagePopover.querySelector('.large-image');
   const largeImageLabel = imagePopover.querySelector('.large-image-label');
@@ -9,6 +10,7 @@ function showFullSizeImage(imageUrl, title, smallImage, tabId) {
 
   largeImage.src = imageUrl;
   imagePopover.classList.remove('hidden');
+  dimmerOverlay.classList.remove('hidden');
   largeImageLabel.textContent = title;
 
   if (tabId === 'tab1') {
@@ -24,6 +26,7 @@ function showFullSizeImage(imageUrl, title, smallImage, tabId) {
   closePopoverOutside = function(event) {
       if (!imagePopover.contains(event.target) && !smallImage.contains(event.target)) {
           imagePopover.classList.add('hidden');
+          dimmerOverlay.classList.add('hidden');
           imagePopover.querySelector('.large-image').src = '';
           document.removeEventListener('click', closePopoverOutside);
       }
@@ -34,6 +37,7 @@ function showFullSizeImage(imageUrl, title, smallImage, tabId) {
   const closeButton = imagePopover.querySelector('.close');
   closeButton.addEventListener('click', function() {
       imagePopover.classList.add('hidden');
+      dimmerOverlay.classList.add('hidden');
       imagePopover.querySelector('.large-image').src = '';
       document.removeEventListener('click', closePopoverOutside);
   });
